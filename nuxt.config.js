@@ -23,7 +23,10 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+    '@/assets/scss/mixins.scss',
+    '@/assets/scss/styles.scss'
+  ],
   /*
    ** Plugins to load before mounting the App
    */
@@ -41,13 +44,21 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/style-resources'
   ],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+  // Style functions and mixins that need to be available to all components
+  // essentially an @import at the start of the scss for each component.
+  styleResources: {
+    scss: [
+      'assets/scss/mixins.scss'
+    ]
+  },
   /*
    ** Build configuration
    */

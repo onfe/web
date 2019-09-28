@@ -10,6 +10,6 @@ export default {}
 
 <style lang="scss" scoped>
 .temp {
-  height: 100em;
+  height: 20em;
 }
 </style>

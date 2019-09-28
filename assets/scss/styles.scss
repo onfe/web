@@ -4,7 +4,12 @@
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
   box-sizing: border-box;
+  height: 100%;
 }
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+html, body {
+  min-height: 100%;
 }

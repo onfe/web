@@ -1,16 +1,19 @@
 <template>
-  <div>
+  <div class="site">
     <Header />
-    <nuxt />
+    <nuxt class="content" />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from '~/components/Header.vue'
+import Footer from '~/components/Footer.vue'
 
 export default {
   components: {
-    Header
+    Header,
+    Footer
   }
 }
 </script>
@@ -26,6 +29,16 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+}
+
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
 }
 
 *,

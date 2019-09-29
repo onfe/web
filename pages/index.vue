@@ -1,11 +1,17 @@
 <template>
-  <div class="container temp">
-    index.html
-  </div>
+  <main>
+    <Hero />
+  </main>
 </template>
 
 <script>
-export default {}
+import Hero from '~/components/Hero.vue'
+
+export default {
+  components: {
+    Hero
+  }
+}
 </script>
 
 <style lang="scss" scoped>

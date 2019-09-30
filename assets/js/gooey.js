@@ -29,7 +29,7 @@ export default class Gooey {
 
     this.rMult = wW > 600 ? 1.5 : 1
 
-    const oX = (wW - cW) / 2 + (cW * 5) / 6
+    const oX = (wW - cW) / 2 + (cW * 5) / 6 - wW / 3
     const oY = this.canvas.clientHeight / 2
 
     this.size = { x: this.canvas.width, y: this.canvas.height }

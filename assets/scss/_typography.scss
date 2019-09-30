@@ -18,3 +18,19 @@
 a {
   color: inherit;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  position: relative;
+  display: table;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0.1em;
+    left: 0.2em;
+    width: 100%;
+    height: 33%;
+    background: transparentize($colour-blue, 0.2);
+    z-index: -1;
+  }
+}

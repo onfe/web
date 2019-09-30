@@ -22,15 +22,17 @@ export default class Gooey {
     let cW = this.canvas.width
 
     // calculate the container width, using the breakpoints
-    cW = wW > 600 ? 540 : cW
-    cW = wW > 900 ? 720 : cW
-    cW = wW > 1200 ? 960 : cW
-    cW = wW > 1800 ? 1200 : cW
+    cW = wW >= 600 ? 540 : cW
+    cW = wW >= 900 ? 720 : cW
+    cW = wW >= 1200 ? 960 : cW
+    cW = wW >= 1800 ? 1200 : cW
 
-    this.rMult = wW > 600 ? 1.5 : 1
+    this.rMult = wW >= 600 ? 1.5 : 1
+    this.pMult = wW >= 600 ? 0.333 : 0
 
-    const oX = (wW - cW) / 2 + (cW * 5) / 6 - wW / 3
+    const oX = (wW - cW) / 2 + (cW * 5) / 6 - wW * this.pMult
     const oY = this.canvas.clientHeight / 2
+    console.log(`wW: ${wW}, pM: ${this.pMult}, oX: ${oX}`)
 
     this.size = { x: this.canvas.width, y: this.canvas.height }
     this.origin = { x: oX, y: oY }
@@ -86,7 +88,7 @@ class Ball {
     this.v.x = (1.2 + Math.random() * 0.3) * Math.cos(this.a)
     this.v.y = (1.2 + Math.random() * 0.3) * Math.sin(this.a)
     this.c = color
-    this.r = (8 + Math.random() * 6) * mult
+    this.r = (9 + Math.random() * 5) * mult
   }
 
   update() {

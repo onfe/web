@@ -41,8 +41,11 @@ export default {
   -webkit-filter: url('#goo-filter');
   filter: url('#goo-filter');
   height: 100%;
-  width: 66%;
-  margin-left: 34%;
+  width: 100%;
+  @include sm {
+    width: 66%;
+    margin-left: 34%;
+  }
 }
 
 .overlay {
@@ -59,11 +62,26 @@ export default {
     ),
     linear-gradient(
       90deg,
-      $colour-dark 34%,
-      #0000 calc(34% + 5em),
+      $colour-dark 0%,
+      #0000 calc(0% + 2em),
       #0000 calc(100% - 2em),
       $colour-dark 100%
     );
+  @include sm {
+    background: linear-gradient(
+        $colour-dark 0%,
+        #0000 calc(0% + 2em),
+        #0000 calc(100% - 2em),
+        $colour-dark 100%
+      ),
+      linear-gradient(
+        90deg,
+        $colour-dark 34%,
+        #0000 calc(34% + 5em),
+        #0000 calc(100% - 2em),
+        $colour-dark 100%
+      );
+  }
 }
 
 .goo {

@@ -9,3 +9,8 @@ $screen-xl-min: 1800px;  // Oh! Look at him with a HD monitor!
 @mixin md { @media (min-width: #{$screen-md-min}) {@content;} } // Medium devices
 @mixin lg { @media (min-width: #{$screen-lg-min}) {@content;} } // Large devices
 @mixin xl { @media (min-width: #{$screen-xl-min}) {@content;} } // Chonky devices
+
+@mixin lt-sm { @media (max-width: #{$screen-sm-min}) {@content;} } // Small devices
+@mixin lt-md { @media (max-width: #{$screen-md-min}) {@content;} } // Medium devices
+@mixin lt-lg { @media (max-width: #{$screen-lg-min}) {@content;} } // Large devices
+@mixin lt-xl { @media (max-width: #{$screen-xl-min}) {@content;} } // Chonky devices

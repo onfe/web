@@ -5,7 +5,7 @@
         <h2>Projects</h2>
       </div>
     </div>
-    <div id="feat-proj" class="projects">
+    <div id="feat-proj" class="container projects">
       <ProjectCard
         class="card"
         image="abababa"
@@ -52,7 +52,15 @@ section {
 .projects {
   padding: $spacer 0;
   display: flex;
-  overflow-x: scroll;
+  overflow: visible;
+  justify-content: space-between;
+
+  @include lt-sm {
+    width: 100%;
+    margin: 0;
+    max-width: 100%;
+    overflow-x: scroll;
+  }
 }
 
 .spacer {
@@ -60,6 +68,9 @@ section {
   height: 0.1px;
   flex-shrink: 0;
   overflow: hidden;
+  @include sm {
+    display: none;
+  }
 }
 
 .pad {
@@ -69,5 +80,17 @@ section {
 .card {
   flex-shrink: 0;
   margin: 0 $spacer;
+  width: 14em;
+
+  @include sm {
+    margin: 0;
+    margin-right: 1em;
+    width: auto;
+    flex-shrink: 1;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
 }
 </style>

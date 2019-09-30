@@ -1,28 +1,30 @@
 <template>
   <section>
-    <div class="container">
-      <h2>Projects</h2>
-      <div id="feat-proj" class="projects">
-        <ProjectCard
-          class="card"
-          image="abababa"
-          title="ababab"
-          subtitle="abababababababbbbbbbbbbbbbb"
-        />
-        <ProjectCard
-          class="card"
-          image="abababa"
-          title="ababab"
-          subtitle="abababababababbbbbbbbbbbbbb"
-        />
-        <ProjectCard
-          class="card"
-          image="abababa"
-          title="ababab"
-          subtitle="abababababababbbbbbbbbbbbbb"
-        />
-        <div class="spacer"></div>
+    <div class="pad">
+      <div class="container">
+        <h2>Projects</h2>
       </div>
+    </div>
+    <div id="feat-proj" class="projects">
+      <ProjectCard
+        class="card"
+        image="abababa"
+        title="ababab"
+        subtitle="abababababababbbbbbbbbbbbbb"
+      />
+      <ProjectCard
+        class="card"
+        image="abababa"
+        title="ababab"
+        subtitle="abababababababbbbbbbbbbbbbb"
+      />
+      <ProjectCard
+        class="card"
+        image="abababa"
+        title="ababab"
+        subtitle="abababababababbbbbbbbbbbbbb"
+      />
+      <div class="spacer"></div>
     </div>
   </section>
 </template>
@@ -58,6 +60,10 @@ section {
   height: 0.1px;
   flex-shrink: 0;
   overflow: hidden;
+}
+
+.pad {
+  padding: 0 $spacer;
 }
 
 .card {

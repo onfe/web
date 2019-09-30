@@ -56,7 +56,7 @@ export default class Gooey {
     this.ctx.arc(
       this.origin.x,
       this.origin.y,
-      35 * this.rMult,
+      40 * this.rMult,
       Math.PI * 2,
       false
     )
@@ -86,7 +86,7 @@ class Ball {
     this.v.x = (1.2 + Math.random() * 0.3) * Math.cos(this.a)
     this.v.y = (1.2 + Math.random() * 0.3) * Math.sin(this.a)
     this.c = color
-    this.r = (5 + Math.random() * 4) * mult
+    this.r = (8 + Math.random() * 6) * mult
   }
 
   update() {

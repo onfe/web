@@ -45,6 +45,8 @@ export default {
 }
 
 .hide {
-  display: none;
+  width: 0;
+  height: 0;
+  position: absolute;
 }
 </style>

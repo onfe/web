@@ -56,15 +56,15 @@ export default {
   width: 100%;
   background: linear-gradient(
       $colour-dark 0%,
-      #0000 calc(0% + 2em),
-      #0000 calc(100% - 2em),
+      #0000 calc(0% + 1em),
+      #0000 calc(100% - 1em),
       $colour-dark 100%
     ),
     linear-gradient(
       90deg,
       $colour-dark 0%,
-      #0000 calc(0% + 2em),
-      #0000 calc(100% - 2em),
+      #0000 calc(0% + 1em),
+      #0000 calc(100% - 1em),
       $colour-dark 100%
     );
   @include sm {

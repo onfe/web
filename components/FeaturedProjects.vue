@@ -90,14 +90,14 @@ section {
 }
 
 .card {
-  flex-shrink: 0;
+  flex: none;
   margin: 0 $spacer;
   width: 14em;
 
   @include sm {
     margin: 0;
     margin-right: 1em;
-    flex-shrink: 1;
+    flex: auto;
 
     &.last {
       margin: 0;

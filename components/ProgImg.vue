@@ -1,9 +1,6 @@
 <template>
   <div v-lazy-container="{ selector: 'img' }" class="">
-    <img
-      :data-src="require('~/assets/img/placeholder.jpg')"
-      :data-loading="require('~/assets/img/placeholder.jpg?lqip')"
-    />
+    <img :data-src="src" :data-loading="lqip" :src="lqip" />
   </div>
 </template>
 
@@ -13,18 +10,19 @@ export default {
     src: {
       type: String,
       default: ''
+    },
+    lqip: {
+      type: String,
+      default: ''
     }
   }
 }
 </script>
 
 <style scoped lang="scss">
-img[lazy='loading'] {
-  filter: blur(5px);
-}
-
 div {
   width: 100%;
+  overflow: hidden;
 }
 
 img {

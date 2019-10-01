@@ -1,6 +1,6 @@
 <template>
   <a :href="url" class="card">
-    <ProgImg src="~/assets/img/placeholder.jpg" class="card-img" alt="" />
+    <ProgImg :src="image" :lqip="lqip" class="card-img" alt="" />
     <div class="card-body">
       <h3>{{ title }}</h3>
       {{ subtitle }}
@@ -25,6 +25,10 @@ export default {
       default: 'Lorem ipsum dolor sit amet.'
     },
     image: {
+      type: String,
+      default: ''
+    },
+    lqip: {
       type: String,
       default: ''
     },

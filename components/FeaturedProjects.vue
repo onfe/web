@@ -9,20 +9,23 @@
     <div id="feat-proj" class="container projects">
       <ProjectCard
         class="card"
-        image="/img/placeholder.jpg"
+        :image="require('~/assets/img/placeholder.jpg')"
+        :lqip="require('~/assets/img/placeholder.jpg?lqip')"
         title="BeautiSearch"
         subtitle="The (old) new tab. Needs an update."
         url="https://www.beautisear.ch"
       />
       <ProjectCard
         class="card"
-        image="abababa"
+        :image="require('~/assets/img/placeholder.jpg')"
+        :lqip="require('~/assets/img/placeholder.jpg?lqip')"
         title="Texto"
         subtitle="Quirky text animations"
       />
       <ProjectCard
         class="card last"
-        image=""
+        :image="require('~/assets/img/placeholder.jpg')"
+        :lqip="require('~/assets/img/placeholder.jpg?lqip')"
         title="Completionist"
         subtitle="Open-source autocomplete engine"
       />

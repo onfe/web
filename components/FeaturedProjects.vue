@@ -1,28 +1,30 @@
 <template>
   <section>
     <div class="pad">
-      <div class="container">
-        <h2>Projects</h2>
+      <div class="container split">
+        <h2 class="a-yell">Projects</h2>
+        <n-link to="/projects" class="more">more</n-link>
       </div>
     </div>
     <div id="feat-proj" class="container projects">
       <ProjectCard
         class="card"
-        image="abababa"
-        title="ababab"
-        subtitle="abababababababbbbbbbbbbbbbb"
+        image="/img/placeholder.jpg"
+        title="BeautiSearch"
+        subtitle="The (old) new tab. Needs an update."
+        url="https://www.beautisear.ch"
       />
       <ProjectCard
         class="card"
         image="abababa"
-        title="ababab"
-        subtitle="abababababababbbbbbbbbbbbbb"
+        title="Texto"
+        subtitle="Quirky text animations"
       />
       <ProjectCard
-        class="card"
-        image="abababa"
-        title="ababab"
-        subtitle="abababababababbbbbbbbbbbbbb"
+        class="card last"
+        image=""
+        title="Completionist"
+        subtitle="Open-source autocomplete engine"
       />
       <div class="spacer"></div>
     </div>
@@ -77,6 +79,13 @@ section {
   padding: 0 $spacer;
 }
 
+.split {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
 .card {
   flex-shrink: 0;
   margin: 0 $spacer;
@@ -85,10 +94,9 @@ section {
   @include sm {
     margin: 0;
     margin-right: 1em;
-    width: auto;
     flex-shrink: 1;
 
-    &:last-child {
+    &.last {
       margin: 0;
     }
   }

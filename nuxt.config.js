@@ -30,7 +30,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['~/plugins/vue-lazyload'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -45,7 +45,8 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@bazzite/nuxt-optimized-images'
   ],
   /*
    ** Axios module configuration
@@ -58,6 +59,11 @@ export default {
     scss: [
       'assets/scss/mixins.scss'
     ]
+  },
+  // Optimize images
+  optimizedImages: {
+    optimizeImages: true,
+    optimizeImagesInDev: true
   },
   /*
    ** Build configuration

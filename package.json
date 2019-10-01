@@ -20,9 +20,13 @@
     }
   },
   "dependencies": {
-    "nuxt": "^2.0.0",
+    "@bazzite/nuxt-optimized-images": "^0.2.1",
     "@nuxtjs/axios": "^5.3.6",
-    "@nuxtjs/pwa": "^3.0.0-0"
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "imagemin-mozjpeg": "^8.0.0",
+    "lqip-loader": "^2.2.0",
+    "nuxt": "^2.0.0",
+    "vue-lazyload": "^1.3.3"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.0.1",

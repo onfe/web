@@ -2,23 +2,33 @@
   <main>
     <Hero />
     <FeaturedProjects />
+    <RecentBlog />
   </main>
 </template>
 
 <script>
 import Hero from '@/components/Hero.vue'
 import FeaturedProjects from '@/components/FeaturedProjects.vue'
+import RecentBlog from '@/components/RecentBlog.vue'
 
 export default {
   components: {
     Hero,
-    FeaturedProjects
+    FeaturedProjects,
+    RecentBlog
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.temp {
-  height: 20em;
+main {
+  section {
+    position: relative;
+    padding-top: $spacer;
+
+    &:last-of-type {
+      padding: $spacer 0;
+    }
+  }
 }
 </style>

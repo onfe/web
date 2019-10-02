@@ -1,31 +1,23 @@
 <template>
   <section>
-    <div class="pad">
-      <div class="container split">
-        <h2 class="a-yell">Projects</h2>
-        <n-link to="/projects" class="more">more</n-link>
-      </div>
-    </div>
+    <HeadingMore title="Projects" more="/projects" />
     <div id="feat-proj" class="container projects">
       <ProjectCard
         class="card"
-        :image="require('~/assets/img/placeholder.jpg')"
-        :lqip="require('~/assets/img/placeholder.jpg?lqip')"
+        image="placeholder.jpg"
         title="BeautiSearch"
         subtitle="The (old) new tab. Needs an update."
         url="https://www.beautisear.ch"
       />
       <ProjectCard
         class="card"
-        :image="require('~/assets/img/placeholder.jpg')"
-        :lqip="require('~/assets/img/placeholder.jpg?lqip')"
+        image="placeholder.jpg"
         title="Texto"
         subtitle="Quirky text animations"
       />
       <ProjectCard
         class="card last"
-        :image="require('~/assets/img/placeholder.jpg')"
-        :lqip="require('~/assets/img/placeholder.jpg?lqip')"
+        image="placeholder.jpg"
         title="Completionist"
         subtitle="Open-source autocomplete engine"
       />
@@ -36,10 +28,12 @@
 
 <script>
 import ProjectCard from '@/components/ProjectCard.vue'
+import HeadingMore from '@/components/HeadingMore.vue'
 
 export default {
   components: {
-    ProjectCard
+    ProjectCard,
+    HeadingMore
   },
   mounted() {
     const cards = document.getElementById('feat-proj')
@@ -49,11 +43,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-section {
-  position: relative;
-  padding: $spacer 0;
-}
-
 .projects {
   padding: $spacer 0;
   display: flex;
@@ -76,17 +65,6 @@ section {
   @include sm {
     display: none;
   }
-}
-
-.pad {
-  padding: 0 $spacer;
-}
-
-.split {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  align-items: center;
 }
 
 .card {

@@ -1,6 +1,6 @@
 <template>
   <div v-lazy-container="{ selector: 'img' }" class="">
-    <img :data-src="src" :data-loading="lqip" :src="lqip" />
+    <img :data-src="imgSrc" :data-loading="lqip" :src="lqip" />
   </div>
 </template>
 
@@ -11,9 +11,20 @@ export default {
       type: String,
       default: ''
     },
-    lqip: {
-      type: String,
-      default: ''
+    size: {
+      type: Number,
+      default: -1
+    }
+  },
+  computed: {
+    lqip() {
+      return require('~/assets/img/' + this.src + '?lqip')
+    },
+    imgSrc() {
+      return require('~/assets/img/placeholder.jpg?resize&size=350')
+    },
+    resize() {
+      return this.size < 0 ? '' : `?resize&size=${this.size}`
     }
   }
 }

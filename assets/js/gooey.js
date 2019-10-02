@@ -32,7 +32,6 @@ export default class Gooey {
 
     const oX = (wW - cW) / 2 + (cW * 5) / 6 - wW * this.pMult
     const oY = this.canvas.clientHeight / 2
-    console.log(`wW: ${wW}, pM: ${this.pMult}, oX: ${oX}`)
 
     this.size = { x: this.canvas.width, y: this.canvas.height }
     this.origin = { x: oX, y: oY }

@@ -63,7 +63,10 @@ export default {
   // Optimize images
   optimizedImages: {
     optimizeImages: true,
-    optimizeImagesInDev: true
+    optimizeImagesInDev: true,
+    responsive: {
+      adapter: require('responsive-loader/jimp')
+    }
   },
   /*
    ** Build configuration

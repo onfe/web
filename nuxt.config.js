@@ -67,6 +67,9 @@ export default {
     optimizeImages: true,
     optimizeImagesInDev: true,
     responsive: {
+      sizes: [350, 650, 1200],
+      // default size if unspecified
+      size: 650,
       adapter: require('responsive-loader/jimp')
     }
   },

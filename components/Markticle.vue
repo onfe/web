@@ -1,5 +1,5 @@
 <template>
-  <div :is="this.md"></div>
+  <div :is="md"></div>
 </template>
 
 <script>

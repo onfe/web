@@ -21,10 +21,7 @@ export default {
       return require('~/assets/img/' + this.src + '?lqip')
     },
     imgSrc() {
-      return require('~/assets/img/placeholder.jpg?resize&size=350')
-    },
-    resize() {
-      return this.size < 0 ? '' : `?resize&size=${this.size}`
+      return require('~/assets/img/' + this.src + '?resize')
     }
   }
 }

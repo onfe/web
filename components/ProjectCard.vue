@@ -2,7 +2,7 @@
   <a :href="url" class="card">
     <ProgImg :src="image" :size="350" class="card-img" alt="" />
     <div class="card-body">
-      <h3>{{ title }}</h3>
+      <h3 class="m-0">{{ title }}</h3>
       {{ subtitle }}
     </div>
   </a>

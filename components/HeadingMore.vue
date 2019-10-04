@@ -1,7 +1,7 @@
 <template>
   <div class="heading">
     <div class="container split">
-      <h2 class="">{{ title }}</h2>
+      <h2 class="m-0">{{ title }}</h2>
       <n-link :to="more" class="more">more</n-link>
     </div>
   </div>

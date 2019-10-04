@@ -10,14 +10,13 @@ export default {
   name: 'Post',
   components: {},
   props: {
-    post: {
+    markdown: {
       type: String,
       default: ''
     }
   },
   data() {
-    const mdFile = require('@/posts/' + this.post + '.md')
-    let mdHtml = marked(mdFile.default)
+    let mdHtml = marked(this.markdown)
 
     const imgRe = /<img src="([^"]*)" ([^/>]*)\/?>/g
 
@@ -40,13 +39,15 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.prog-image {
-  border-radius: $spacer / 2;
-  box-shadow: 0 1px 16px rgba(0, 0, 0, 0.5);
-  overflow: visible;
+div /deep/ {
+  .prog-image {
+    border-radius: $spacer / 2;
+    box-shadow: 0 1px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 
-  img {
-    display: block;
+    img {
+      display: block;
+    }
   }
 }
 </style>

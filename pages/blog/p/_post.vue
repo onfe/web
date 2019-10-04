@@ -1,12 +1,19 @@
 <template>
   <main class="pad">
+    <div class="info container">
+      <h1>{{ attributes.title }}</h1>
+      <div v-if="this.date" class="date">Published {{ this.date }}</div>
+      <br />
+      <hr />
+    </div>
     <article class="container">
-      <Markticle :post="post"></Markticle>
+      <Markticle :markdown="markdown"></Markticle>
     </article>
   </main>
 </template>
 
 <script>
+import fm from 'front-matter'
 import Markticle from '@/components/Markticle.vue'
 
 export default {
@@ -14,8 +21,24 @@ export default {
     Markticle
   },
   data() {
+    const mdFile = require('@/posts/' + this.$route.params.post + '.md')
+    const mdDoc = fm(mdFile.default)
+
     return {
-      post: this.$route.params.post
+      markdown: mdDoc.body,
+      attributes: mdDoc.attributes
+    }
+  },
+  computed: {
+    date() {
+      if (!this.attributes.date) {
+        return null
+      }
+      const date = new Date(this.attributes.date)
+      const day = date.getDate()
+      const month = date.getMonth() + 1
+      const year = date.getFullYear()
+      return `${day}/${month}/${year}`
     }
   }
 }
@@ -24,5 +47,14 @@ export default {
 <style scoped lang="scss">
 .pad {
   padding: $spacer;
+}
+
+.info * {
+  margin: 0;
+}
+
+.date {
+  color: $colour-secondary;
+  font-size: 0.85em;
 }
 </style>

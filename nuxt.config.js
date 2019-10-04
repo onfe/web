@@ -1,4 +1,4 @@
-const getPosts = require('./plugins/get-posts.js')
+import getPosts from './plugins/get-posts.js'
 
 export default {
   mode: 'universal',
@@ -88,7 +88,7 @@ export default {
   },
   generate: {
     routes: function() {
-      return () => getPosts()
+      return getPosts.get()
     }
   }
 }

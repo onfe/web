@@ -1,3 +1,5 @@
+const getPosts = require('./plugins/get-posts.js')
+
 export default {
   mode: 'universal',
   /*
@@ -83,5 +85,10 @@ export default {
        // Use vue with the runtime compiler.
        config.resolve.alias['vue'] = 'vue/dist/vue.common'
      }
+  },
+  generate: {
+    routes: function() {
+      return () => getPosts()
+    }
   }
 }

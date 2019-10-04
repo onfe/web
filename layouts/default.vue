@@ -40,11 +40,4 @@ html {
 .content {
   flex: 1 0 auto;
 }
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-}
 </style>

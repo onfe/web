@@ -1,5 +1,5 @@
 <template>
-  <div v-lazy-container="{ selector: 'img' }" class="">
+  <div v-lazy-container="{ selector: 'img' }" class="prog-image">
     <img :data-src="imgSrc" :data-loading="lqip" :src="lqip" />
   </div>
 </template>

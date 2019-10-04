@@ -1,7 +1,5 @@
 <template>
-  <article class="container">
-    <div :is="comp"></div>
-  </article>
+  <div :is="this.md"></div>
 </template>
 
 <script>
@@ -9,10 +7,16 @@ import marked from 'marked'
 import ProgImg from '@/components/ProgImg.vue'
 
 export default {
+  name: 'Post',
   components: {},
-  name: 'post',
+  props: {
+    post: {
+      type: String,
+      default: ''
+    }
+  },
   data() {
-    const mdFile = require('@/posts/test.md')
+    const mdFile = require('@/posts/' + this.post + '.md')
     let mdHtml = marked(mdFile.default)
 
     const imgRe = /<img src="([^"]*)" ([^/>]*)\/?>/g
@@ -20,7 +24,7 @@ export default {
     mdHtml = mdHtml.replace(imgRe, ($0, $1) => `<ProgImg src="${$1}"/>`)
     console.log(mdHtml)
 
-    const comp = {
+    const md = {
       template: `<div>${mdHtml}</div>`,
       name: 'md',
       components: {
@@ -29,10 +33,20 @@ export default {
     }
 
     return {
-      comp
+      md
     }
   }
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped lang="scss">
+.prog-image {
+  border-radius: $spacer / 2;
+  box-shadow: 0 1px 16px rgba(0, 0, 0, 0.5);
+  overflow: visible;
+
+  img {
+    display: block;
+  }
+}
+</style>

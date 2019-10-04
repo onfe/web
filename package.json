@@ -22,13 +22,14 @@
   "dependencies": {
     "@bazzite/nuxt-optimized-images": "^0.2.1",
     "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/markdownit": "^1.2.6",
     "@nuxtjs/pwa": "^3.0.0-0",
     "front-matter": "^3.0.2",
     "glob": "^7.1.4",
     "imagemin-mozjpeg": "^8.0.0",
     "jimp": "^0.8.4",
     "lqip-loader": "^2.2.0",
-    "marked": "^0.7.0",
+    "markdown-it-highlightjs": "^3.0.0",
     "nuxt": "^2.0.0",
     "responsive-loader": "^1.2.0",
     "vue-lazyload": "^1.3.3"

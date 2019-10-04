@@ -3,8 +3,11 @@
 </template>
 
 <script>
-import marked from 'marked'
 import ProgImg from '@/components/ProgImg.vue'
+const mdIt = require('markdown-it')({
+  html: true,
+  typographer: true
+}).use(require('markdown-it-highlightjs'), { auto: true })
 
 export default {
   name: 'Post',
@@ -16,12 +19,11 @@ export default {
     }
   },
   data() {
-    let mdHtml = marked(this.markdown)
+    let mdHtml = mdIt.render(this.markdown)
 
     const imgRe = /<img src="([^"]*)" ([^/>]*)\/?>/g
 
     mdHtml = mdHtml.replace(imgRe, ($0, $1) => `<ProgImg src="${$1}"/>`)
-    console.log(mdHtml)
 
     const md = {
       template: `<div>${mdHtml}</div>`,
@@ -42,12 +44,21 @@ export default {
 div /deep/ {
   .prog-image {
     border-radius: $spacer / 2;
-    box-shadow: 0 1px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: $subtle-shadow;
     overflow: hidden;
+    max-height: 30em;
+    max-width: 40em;
+    margin: 0 auto;
 
     img {
       display: block;
     }
+  }
+
+  pre {
+    box-shadow: $subtle-shadow;
+    padding: $spacer;
+    border-radius: $spacer / 2;
   }
 }
 </style>

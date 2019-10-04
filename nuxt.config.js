@@ -75,6 +75,13 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+     extend(config, { isDev, isClient }) {
+       config.module.rules.push({
+         test: /\.md$/,
+         use: ["raw-loader"]
+       });
+       // Use vue with the runtime compiler.
+       config.resolve.alias['vue'] = 'vue/dist/vue.common'
+     }
   }
 }

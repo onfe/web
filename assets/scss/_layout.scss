@@ -9,7 +9,7 @@
   @include sm() { max-width: 540px; };
   @include md() { max-width: 720px; };
   @include lg() { max-width: 960px; };
-  @include xl() { max-width: 1200px; };
+  @include xl() { max-width: 1000px; };
 }
 
 .card {

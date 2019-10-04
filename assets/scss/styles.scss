@@ -1,6 +1,7 @@
 @import 'layout';
 @import 'typography';
 @import 'vars';
+@import '~/node_modules/highlight.js/styles/atom-one-light.css';
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {

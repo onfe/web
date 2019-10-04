@@ -11,6 +11,12 @@
 // Montserrat
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
+// Code
+pre, code, samp {
+  font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  background: $colour-light
+}
+
 * {
   font-family: 'Montserrat', sans-serif;
 }

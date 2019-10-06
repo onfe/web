@@ -65,8 +65,12 @@ export default {
 
 .card {
   flex: none;
-  margin: 0 $spacer;
+  margin-left: $spacer;
   width: 14em;
+
+  &.last {
+    margin: 0 $spacer;
+  }
 
   @include sm {
     margin: 0;

@@ -2,13 +2,15 @@
   <main class="pad">
     <div class="info container">
       <h1>{{ attributes.title }}</h1>
-      <div v-if="this.date" class="date">Published {{ this.date }}</div>
-      <br />
+      <div v-if="date" class="date">Published {{ date }}</div>
       <hr />
     </div>
     <article class="container">
       <Markticle :markdown="markdown"></Markticle>
     </article>
+    <div class="container after">
+      <n-link class="more" to="/blog">Back to Blog</n-link>
+    </div>
   </main>
 </template>
 
@@ -49,12 +51,20 @@ export default {
   padding: $spacer;
 }
 
-.info * {
+h1,
+h2 {
   margin: 0;
 }
 
 .date {
   color: $colour-secondary;
   font-size: 0.85em;
+}
+
+.after {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 </style>

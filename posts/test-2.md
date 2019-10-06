@@ -1,6 +1,7 @@
 ---
-title: A Test Article
-date: 2000-2-23
+title: A Second Test Article
+date: 2000-2-24
+description: A description, of sorts. Something about the article.
 ---
 # Retro carcere eminus
 

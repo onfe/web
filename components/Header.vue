@@ -5,8 +5,8 @@
         ONFE
       </n-link>
       <div class="collapse">
-        <n-link to="blog">Blog</n-link>
-        <n-link to="projects">Projects</n-link>
+        <n-link to="/blog">Blog</n-link>
+        <n-link to="/projects">Projects</n-link>
       </div>
     </nav>
   </header>

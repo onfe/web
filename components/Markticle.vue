@@ -56,7 +56,6 @@ div /deep/ {
   }
 
   pre {
-    box-shadow: $subtle-shadow;
     padding: $spacer;
     border-radius: $spacer / 2;
   }

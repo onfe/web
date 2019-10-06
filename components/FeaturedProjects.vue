@@ -4,14 +4,14 @@
     <div id="feat-proj" class="container projects">
       <ProjectCard
         class="card"
-        image="placeholder.jpg"
+        image="beautisearch.jpg"
         title="BeautiSearch"
         subtitle="The (old) new tab. Needs an update."
         url="https://www.beautisear.ch"
       />
       <ProjectCard
         class="card"
-        image="placeholder.jpg"
+        image="texto.jpg"
         title="Texto"
         subtitle="Quirky text animations"
       />
@@ -34,10 +34,6 @@ export default {
   components: {
     ProjectCard,
     HeadingMore
-  },
-  mounted() {
-    const cards = document.getElementById('feat-proj')
-    cards.scrollLeft = cards.scrollWidth / 2 - cards.clientWidth / 2
   }
 }
 </script>

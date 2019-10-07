@@ -88,5 +88,10 @@ export default {
        // Use vue with the runtime compiler.
        config.resolve.alias['vue'] = 'vue/dist/vue.common'
      }
+  },
+  generate: {
+    routes: function() {
+      return getPosts.get()
+    }
   }
 }

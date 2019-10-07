@@ -5,7 +5,7 @@ description: A description, of sorts. Something about the article.
 ---
 # Retro carcere eminus
 
-![test image](placeholder.jpg)
+![r16x9 test image](placeholder.jpg)
 
 ## Vulnusque adusque
 
@@ -63,7 +63,7 @@ vocatur incustoditam. Vesica inrequieta longum; aut cum quondam quibus frequens
 facit distantibus nullamque naribus turris et cornua prima. Esse summum dicta,
 et cultoribus sed, lacunabant et iuga.
 
-![test image](placeholder.jpg)
+![r16x9 test image](placeholder.jpg)
 
 Paulum sollicitumque hinc quos reppulit tenentes magnas conplexus obruta, videt
 illic Phaethon. Inesset est loqui saxa, tempore siqua iactanti solari inde

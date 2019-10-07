@@ -21,9 +21,13 @@ export default {
   data() {
     let mdHtml = mdIt.render(this.markdown)
 
-    const imgRe = /<img src="([^"]*)" ([^/>]*)\/?>/g
+    const imgRe = /<img src="([^"]*)" alt="(r(\d+)x(\d+))? ?([^"]*)"[^/>]*?\/?>/g
 
-    mdHtml = mdHtml.replace(imgRe, ($0, $1) => `<ProgImg src="${$1}"/>`)
+    mdHtml = mdHtml.replace(imgRe, (m, p1, p2, p3, p4, p5) => {
+      const alt = p5 ? `alt="${p5}"` : ''
+      const ratio = p3 && p4 ? `:ratio="${p3 / p4}"` : ''
+      return `<ProgImg src="${p1}" ${alt}${ratio}/>`
+    })
 
     const md = {
       template: `<div>${mdHtml}</div>`,

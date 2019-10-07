@@ -1,6 +1,8 @@
 <template>
-  <div v-lazy-container="{ selector: 'img' }" :style="rStyle" :class="rClass">
-    <img :data-src="imgSrc" :data-loading="lqip" :src="lqip" />
+  <div class="prog-image">
+    <div v-lazy-container="{ selector: 'img' }" :style="rStyle" :class="rClass">
+      <img :data-src="imgSrc" :data-loading="lqip" :src="lqip" />
+    </div>
   </div>
 </template>
 
@@ -32,14 +34,14 @@ export default {
       return this.ratio > 0 ? `padding-bottom: ${perc}%;` : ''
     },
     rClass() {
-      return (this.ratio > 0 ? 'ratio' : 'noRatio') + ' prog-image'
+      return (this.ratio > 0 ? 'ratio' : 'noRatio') + ' ratioWrap'
     }
   }
 }
 </script>
 
 <style scoped lang="scss">
-div {
+.ratioWrap {
   box-sizing: border-box;
   width: 100%;
   overflow: hidden;

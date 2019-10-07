@@ -6,7 +6,7 @@
         class="card"
         image="beautisearch.jpg"
         title="BeautiSearch"
-        subtitle="The (old) new tab. Needs an update."
+        subtitle="The new, new tab."
         url="https://www.beautisear.ch"
       />
       <ProjectCard
@@ -17,9 +17,10 @@
       />
       <ProjectCard
         class="card last"
-        image="placeholder.jpg"
+        image="completionist.png"
         title="Completionist"
-        subtitle="Open-source autocomplete engine"
+        subtitle="OSS autocomplete engine"
+        url="https://github.com/onfe/Completionist"
       />
       <div class="spacer"></div>
     </div>

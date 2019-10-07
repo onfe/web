@@ -1,8 +1,17 @@
 <template>
   <footer>
     <div class="container footer">
-      <span>Made with &lt;3 by Edward Hails</span>
-      <a href="/keybase.txt">Verify</a>
+      <div class="left">
+        &copy; Edward Hails (<a href="/keybase.txt">Verify</a>) 2019
+      </div>
+      <div class="center">
+        <n-link to="/"><div class="onfe">O</div></n-link>
+      </div>
+      <div class="right">
+        Code snips are
+        <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a>
+        unless noted.
+      </div>
     </div>
   </footer>
 </template>
@@ -16,6 +25,35 @@ footer {
 }
 
 .footer {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  @include sm {
+    flex-direction: row;
+  }
+}
+
+.center > a {
+  text-decoration: none;
+}
+
+.left,
+.right {
+  @include sm {
+    width: 33%;
+  }
+}
+
+.center {
+  display: none;
+  @include sm {
+    display: block;
+  }
+}
+
+.right {
+  text-align: right;
 }
 </style>

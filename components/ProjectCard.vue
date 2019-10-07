@@ -1,6 +1,6 @@
 <template>
   <a :href="url" class="card">
-    <ProgImg :src="image" :size="350" class="card-img" alt="" />
+    <ProgImg :src="image" :size="350" class="card-img" alt="" :ratio="16 / 9" />
     <div class="card-body">
       <h3 class="m-0">{{ title }}</h3>
       {{ subtitle }}

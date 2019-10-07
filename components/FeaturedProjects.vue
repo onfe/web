@@ -14,6 +14,7 @@
         image="texto.jpg"
         title="Texto"
         subtitle="Quirky text animations"
+        url="/projects/texto"
       />
       <ProjectCard
         class="card last"

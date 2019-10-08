@@ -41,8 +41,10 @@ footer {
 
 .left,
 .right {
+  font-size: 0.875em;
+
   @include sm {
-    width: 33%;
+    width: calc(50% - 2em);
   }
 }
 

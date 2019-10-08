@@ -42,6 +42,11 @@ export default {
       const year = date.getFullYear()
       return `${day}/${month}/${year}`
     }
+  },
+  head() {
+    return {
+      title: this.attributes.title
+    }
   }
 }
 </script>

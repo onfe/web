@@ -16,6 +16,11 @@ export default {
     Hero,
     FeaturedProjects,
     RecentBlog
+  },
+  head() {
+    return {
+      title: 'Home'
+    }
   }
 }
 </script>

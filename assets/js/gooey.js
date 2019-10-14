@@ -25,7 +25,7 @@ export default class Gooey {
     cW = wW >= 600 ? 540 : cW
     cW = wW >= 900 ? 720 : cW
     cW = wW >= 1200 ? 960 : cW
-    cW = wW >= 1800 ? 1200 : cW
+    cW = wW >= 1800 ? 1000 : cW
 
     this.rMult = wW >= 600 ? 1.5 : 1
     this.pMult = wW >= 600 ? 0.333 : 0

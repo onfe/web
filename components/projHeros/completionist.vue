@@ -28,7 +28,7 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:800');
 
 section {
-  background: #0069ff;
+  background: linear-gradient(100deg, #0069ff 70%, #fff calc(70% + 1px));
   font-family: 'Raleway';
   overflow: hidden;
   padding: 0 $spacer;
@@ -47,28 +47,25 @@ section {
   @include sm {
     flex-direction: row-reverse;
     align-items: center;
-    background: linear-gradient(100deg, #fff 25%, #0069ff calc(25% + 1px));
+    background: linear-gradient(100deg, #fff 10em, #0069ff calc(10em + 1px));
   }
 }
 
 .logo {
-  flex: 1;
-
   @include sm {
     text-align: right;
-    width: 49%;
+    width: calc(100% - 20em);
     margin: 0;
   }
 }
 
 .detail {
   padding-top: $spacer;
-  flex: 1;
 
   @include sm {
     padding: 0;
     padding-right: $spacer;
-    width: 40%;
+    width: 20em;
   }
 }
 
@@ -88,11 +85,11 @@ h2 {
   border-radius: 1em 0 0 1em;
 
   @include md {
-    font-size: 2.75em;
+    font-size: 3em;
   }
 
   @include lg {
-    font-size: 3.5em;
+    font-size: 4em;
   }
 }
 

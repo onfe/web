@@ -25,11 +25,10 @@
 </template>
 
 <style scoped lang="scss">
-@import url('https://fonts.googleapis.com/css?family=Raleway:800');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700&display=swap');
 
 section {
   background: linear-gradient(100deg, #0069ff 70%, #fff calc(70% + 1px));
-  font-family: 'Raleway';
   overflow: hidden;
   padding: 0 $spacer;
 
@@ -77,7 +76,7 @@ h2 {
   display: inline-block;
   position: relative;
   font-size: 2em;
-  font-weight: bolder;
+  font-weight: 700;
   margin: 0;
   padding: 0 0.2em;
   background: #fff;

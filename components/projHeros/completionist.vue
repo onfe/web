@@ -41,7 +41,7 @@ section {
   display: flex;
   position: relative;
   flex-direction: column;
-  padding: 2 * $spacer 0;
+  padding: $spacer 0;
 
   @include sm {
     flex-direction: row-reverse;

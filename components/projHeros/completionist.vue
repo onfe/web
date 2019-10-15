@@ -4,20 +4,13 @@
       <div class="logo">
         <h2>Completionist</h2>
       </div>
-      <div class="detail">
-        <div class="card">
-          <div class="card-body">
-            <div class="text">
-              <p>An open-source autocomplete engine, written in C++.</p>
-              <p>Lightning fast. Memory efficient.</p>
-            </div>
-            <a
-              href="https://github.com/onfe/Completionist"
-              class="btn btn-block"
-            >
-              View the Source »
-            </a>
-          </div>
+      <div class="card">
+        <div class="card-body">
+          <p>An open-source autocomplete engine, written in C++.</p>
+          <p>Lightning fast. Memory efficient.</p>
+          <a href="https://github.com/onfe/Completionist" class="btn btn-block">
+            View the Source »
+          </a>
         </div>
       </div>
     </div>
@@ -58,24 +51,21 @@ section {
   }
 }
 
-.detail {
-  padding-top: $spacer;
-
-  @include sm {
-    padding: 0;
-    padding-right: $spacer;
-    width: 20em;
-  }
-}
-
 .card {
   background: $colour-white;
+  margin-top: $spacer;
+
+  @include sm {
+    margin: 0;
+    margin-right: $spacer;
+    width: 20em;
+  }
 }
 
 h2 {
   display: inline-block;
   position: relative;
-  font-size: 2em;
+  font-size: 2.25em;
   font-weight: 700;
   margin: 0;
   padding: 0 0.2em;
@@ -108,7 +98,7 @@ h2::after {
   color: $colour-white;
 }
 
-.text p {
+p {
   margin: 0;
   margin-bottom: 1em;
 }

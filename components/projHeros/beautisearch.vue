@@ -9,17 +9,15 @@
           <img src="/media/beautisearch.svg" alt="" />
         </div>
       </div>
-      <div class="detail">
-        <div class="card">
-          <div class="card-body">
-            <div class="text">
-              <p>BeautiSearch is the new, new tab.</p>
-              <p>Use the search providers you love, in a sleek new style.</p>
-            </div>
-            <a href="https://www.beautisear.ch/" class="btn btn-block">
-              Enhance your tabs »
-            </a>
+      <div class="card">
+        <div class="card-body">
+          <div class="text">
+            <p>BeautiSearch is the new, new tab.</p>
+            <p>Use the search providers you love, in a sleek new style.</p>
           </div>
+          <a href="https://www.beautisear.ch/" class="btn btn-block">
+            Enhance your tabs »
+          </a>
         </div>
       </div>
     </div>
@@ -57,16 +55,13 @@ img {
   }
 }
 
-.detail {
+.card {
+  background: $colour-white;
+  z-index: 5;
   width: 100%;
   @include sm {
     width: 20em;
   }
-}
-
-.card {
-  background: $colour-white;
-  z-index: 5;
 }
 
 .btn {
@@ -81,10 +76,16 @@ p {
 
 .logo-wrap {
   @include sm {
-    width: calc(100% - 20em);
+    width: calc(100% - 21em);
+    border-radius: 3em;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: $spacer;
+  }
+
+  @include lg {
+    background: #fff;
   }
 }
 
@@ -125,7 +126,7 @@ p {
   }
 
   .circle.three {
-    z-index: 2;
+    z-index: 1;
     width: 82%;
     height: 82%;
     background: mix($bs-colour, #fff8);

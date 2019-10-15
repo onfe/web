@@ -9,7 +9,7 @@
 }
 
 // Montserrat
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap');
 
 // Code
 pre, code, samp {
@@ -52,7 +52,7 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   position: relative;
-  font-weight: normal;
+  font-weight: 500;
 
   &.m-0 {
     margin: 0;

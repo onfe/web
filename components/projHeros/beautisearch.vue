@@ -80,10 +80,12 @@ p {
 }
 
 .logo-wrap {
-  width: calc(100% - 20em);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include sm {
+    width: calc(100% - 20em);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .logo {

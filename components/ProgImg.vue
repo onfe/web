@@ -52,7 +52,7 @@ export default {
     height: 0;
   }
 
-  .ratio > img {
+  &.ratio > img {
     position: absolute;
     top: 0;
     left: 0;
@@ -65,5 +65,10 @@ export default {
 img {
   width: 100%;
   overflow: hidden;
+
+  &:not([lazy='loaded']) {
+    filter: blur(5px);
+    transform: scale(1.05);
+  }
 }
 </style>

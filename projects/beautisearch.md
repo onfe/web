@@ -5,6 +5,7 @@ description: "Use the search providers you love, in a sleek new style. A static 
 date: 2018-04-28
 image: "beautisearch.jpg"
 url: "https://www.beautisear.ch"
+featured: true
 links:
 - type: "primary"
   text: "Enhance your tabs"

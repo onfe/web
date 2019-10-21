@@ -1,6 +1,6 @@
 <template>
   <section>
-    <HeadingMore title="Projects" more="/projects" />
+    <HeadingMore title="Featured Projects" more="/projects" />
     <div id="feat-proj" class="container projects">
       <ProjectCard
         v-for="(project, key) in projects"
@@ -27,7 +27,7 @@ export default {
   },
   computed: {
     projects() {
-      return this.$store.state.projects.slice(0, 3)
+      return this.$store.state.projects.filter((e) => e.attributes.featured)
     }
   }
 }

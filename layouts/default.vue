@@ -1,5 +1,5 @@
 <template>
-  <div class="site">
+  <div class="site" name="top">
     <Header />
     <nuxt class="content" />
     <Footer />

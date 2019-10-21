@@ -5,7 +5,7 @@ description: A description, of sorts. Something about the article.
 ---
 # Retro carcere eminus
 
-![r16x9 test image](placeholder2.jpg)
+<ProgImg src="placeholder2.jpg" :ratio="16/9"/>
 
 ## Vulnusque adusque
 
@@ -64,6 +64,10 @@ Erat scelus Nyseus ora sit vale vates enim, visa virgo precor peccavere aurea
 confessam timetque sequemur ardor nulla. Bracchia iuvencos, et sunt quoque; nec
 pedum subito: inque.
 
+- Something
+- Something else
+  - A nested thing
+
 ## Eburno coniugium placet mentes ruricolam in vincere
 
 Adflatuque *toto* leves, *concavaque vasto ipsaque* Ortygie: essem sacerdos
@@ -71,7 +75,7 @@ vocatur incustoditam. Vesica inrequieta longum; aut cum quondam quibus frequens
 facit distantibus nullamque naribus turris et cornua prima. Esse summum dicta,
 et cultoribus sed, lacunabant et iuga.
 
-![r16x9 test image](placeholder.jpg)
+<ProgImg src="placeholder.jpg" :ratio="16/9"/>
 
 Paulum sollicitumque hinc quos reppulit tenentes magnas conplexus obruta, videt
 illic Phaethon. Inesset est loqui saxa, tempore siqua iactanti solari inde

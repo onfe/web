@@ -14,7 +14,7 @@
 // Code
 pre, code, samp {
   font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-  background: $colour-light;
+  background: #fafafa;
   font-size: 0.875rem;
 }
 
@@ -71,5 +71,22 @@ h1, h2, h3, h4, h5, h6 {
   &:hover {
     transform: translate(-0.1em, -0.1em);
     text-shadow: 0.1em 0.1em #fff9, 0.2em 0.2em $colour-blue;
+  }
+}
+
+blockquote {
+  position: relative;
+  margin: 0;
+  margin: 1em;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -1em;
+    width: 0.25em;
+    border-radius: 0.125em;
+    height: 100%;
+    background: $colour-blue;
   }
 }

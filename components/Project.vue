@@ -1,9 +1,7 @@
 <template lang="html">
   <section>
     <div class="project">
-      <div class="img">
-        <ProgImg class="card" :src="image" :ratio="16 / 9" />
-      </div>
+      <ProgImg class="card img" :src="image" :ratio="16 / 9" />
       <div class="info">
         <div class="titlebar">
           <h2>{{ title }}</h2>

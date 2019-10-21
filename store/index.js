@@ -1,10 +1,14 @@
 export const state = () => ({
-  posts: []
+  posts: [],
+  projects: []
 })
 
 export const mutations = {
-  set(state, posts) {
+  setPosts(state, posts) {
     state.posts = posts
+  },
+  setProjects(state, projects) {
+    state.projects = projects
   }
 }
 
@@ -12,29 +16,47 @@ export const actions = {
   // Server side rendering init.
   // Load all posts and store them.
   async nuxtServerInit({ commit }) {
-    const fm = require('front-matter')
-
     // Get all posts.md
-    const files = await require.context('@/posts/', false, /\.md$/)
+    const postFiles = await require.context('@/posts/', false, /\.md$/)
 
     // extract information
-    const posts = files
+    const posts = postFiles
       .keys()
       .map((key) => {
-        const post = files(key)
-        post.slug = key.slice(2, -3)
+        const post = postFiles(key)
+        post.attributes.slug = key.slice(2, -3)
+        post.attributes.date = new Date(post.attributes.date)
         return post
       })
-      .map((post) => {
-        const info = fm(post.default).attributes
-        info.slug = post.slug
-        info.date = new Date(info.date)
-        return info
-      })
       .sort((a, b) => {
-        return b.date.getTime() - a.date.getTime()
+        return b.attributes.date.getTime() - a.attributes.date.getTime()
       })
 
-    commit('set', posts)
+    commit('setPosts', posts)
+
+    // rinse and repeat for projects.
+    // TODO: Refactor -> reusable.
+
+    // Get all projects.md
+    const projectFiles = await require.context('@/projects/', false, /\.md$/)
+
+    // extract information
+    const projects = projectFiles
+      .keys()
+      .map((key) => {
+        const project = projectFiles(key)
+        if (project.attributes.date !== 'now') {
+          project.attributes.date = new Date(project.attributes.date)
+        } else {
+          // if a current project, set date to today.
+          project.attributes.date = new Date()
+        }
+        return project
+      })
+      .sort((a, b) => {
+        return b.attributes.date.getTime() - a.attributes.date.getTime()
+      })
+
+    commit('setProjects', projects)
   }
 }

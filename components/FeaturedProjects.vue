@@ -3,25 +3,13 @@
     <HeadingMore title="Projects" more="/projects" />
     <div id="feat-proj" class="container projects">
       <ProjectCard
-        class="card"
-        image="beautisearch.jpg"
-        title="BeautiSearch"
-        subtitle="The new, new tab."
-        url="https://www.beautisear.ch"
-      />
-      <ProjectCard
-        class="card"
-        image="texto.jpg"
-        title="Texto"
-        subtitle="Quirky text animations"
-        url="/projects/texto"
-      />
-      <ProjectCard
-        class="card last"
-        image="completionist.png"
-        title="Completionist"
-        subtitle="OSS autocomplete engine"
-        url="https://github.com/onfe/Completionist"
+        v-for="(project, key) in projects"
+        :key="key"
+        :class="{ last: key == projects.length - 1 }"
+        :image="project.attributes.image"
+        :title="project.attributes.title"
+        :subtitle="project.attributes.subtitle"
+        :url="project.attributes.url"
       />
       <div class="spacer"></div>
     </div>
@@ -36,6 +24,11 @@ export default {
   components: {
     ProjectCard,
     HeadingMore
+  },
+  computed: {
+    projects() {
+      return this.$store.state.projects.slice(0, 3)
+    }
   }
 }
 </script>

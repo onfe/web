@@ -4,11 +4,11 @@
     <div class="pad">
       <div class="container">
         <article v-for="(post, key) in posts" :key="key">
-          <nuxt-link :to="`/blog/p/${post.slug}`" class="post card">
+          <nuxt-link :to="`/blog/p/${post.attributes.slug}`" class="post card">
             <div class="card-body">
-              <h3 class="m-0">{{ post.title }}</h3>
-              <p v-if="post.description" class="desc m-0">
-                {{ post.description }}
+              <h3 class="m-0">{{ post.attributes.title }}</h3>
+              <p v-if="post.attributes.description" class="desc m-0">
+                {{ post.attributes.description }}
               </p>
             </div>
           </nuxt-link>

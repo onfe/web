@@ -1,4 +1,10 @@
 import getPosts from './plugins/get-posts.js'
+import Mode from 'frontmatter-markdown-loader/mode'
+
+const md = require('markdown-it')({
+  html: true,
+  typographer: true
+}).use(require('markdown-it-highlightjs'), { auto: true })
 
 export default {
   mode: 'universal',
@@ -22,7 +28,7 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: { color: '#0096ff' },
   /*
    ** Global CSS
    */
@@ -82,12 +88,17 @@ export default {
      ** You can extend webpack config here
      */
      extend(config, { isDev, isClient }) {
+       // Load markdown as Vue components.
        config.module.rules.push({
          test: /\.md$/,
-         use: ["raw-loader"]
+         loader: 'frontmatter-markdown-loader',
+         options: {
+           mode: [Mode.VUE_RENDER_FUNCTIONS],
+           markdown: (body) => {
+             return md.render(body)
+           }
+         }
        });
-       // Use vue with the runtime compiler.
-       config.resolve.alias['vue'] = 'vue/dist/vue.common'
      }
   },
   generate: {

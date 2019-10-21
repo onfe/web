@@ -6,7 +6,7 @@
       <hr />
     </div>
     <article class="container">
-      <Markticle :markdown="markdown"></Markticle>
+      <Markticle :markdown="markdown.vue"></Markticle>
     </article>
     <div class="container after">
       <n-link class="more" to="/blog">Back to Blog</n-link>
@@ -15,7 +15,6 @@
 </template>
 
 <script>
-import fm from 'front-matter'
 import Markticle from '@/components/Markticle.vue'
 
 export default {
@@ -23,12 +22,10 @@ export default {
     Markticle
   },
   data() {
-    const mdFile = require('@/posts/' + this.$route.params.post + '.md')
-    const mdDoc = fm(mdFile.default)
-
+    const markdown = require('@/posts/' + this.$route.params.post + '.md')
     return {
-      markdown: mdDoc.body,
-      attributes: mdDoc.attributes
+      markdown,
+      attributes: markdown.attributes
     }
   },
   computed: {
@@ -59,6 +56,10 @@ export default {
 h1,
 h2 {
   margin: 0;
+}
+
+article {
+  padding: $spacer 0;
 }
 
 .date {

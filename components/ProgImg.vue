@@ -65,6 +65,7 @@ export default {
 img {
   width: 100%;
   overflow: hidden;
+  object-fit: cover;
 
   &:not([lazy='loaded']) {
     filter: blur(5px);

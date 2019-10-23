@@ -1,8 +1,8 @@
 <template lang="html">
   <section>
-    <div class="project">
-      <ProgImg class="card img" :src="image" :ratio="16 / 9" />
-      <div class="info">
+    <div class="project card">
+      <ProgImg class="img" :src="image" :ratio="16 / 9" />
+      <div class="info card-body">
         <div class="titlebar">
           <h2>{{ title }}</h2>
           <span class="year">{{ year }}</span>
@@ -10,7 +10,7 @@
         <p class="lead">
           {{ subtitle }}
         </p>
-        <p>
+        <p class="detail">
           {{ description }}
         </p>
         <div class="links">
@@ -76,7 +76,7 @@ export default {
 .project {
   display: flex;
   flex-direction: column;
-  padding-bottom: $spacer;
+  margin-bottom: $spacer;
 
   @include sm {
     flex-direction: row;
@@ -99,9 +99,21 @@ export default {
 }
 
 .lead {
-  font-size: 1.125em;
+  font-size: 1em;
   margin: 0;
   color: $colour-secondary;
+}
+
+.detail {
+  margin: $spacer / 2 0;
+
+  @include sm {
+    display: none;
+  }
+
+  @include md {
+    display: block;
+  }
 }
 
 .img {
@@ -110,18 +122,23 @@ export default {
   align-self: center;
 
   @include sm {
+    flex: 0 0 45%;
+  }
+
+  @include lg {
     flex: 0 0 40%;
   }
 }
 
 .info {
-  padding-top: $spacer;
   height: auto;
 
   @include sm {
-    padding: 0;
-    padding-left: $spacer;
-    flex: 1 1 60%;
+    flex: 0 0 55%;
+  }
+
+  @include lg {
+    flex: 0 0 60%;
   }
 }
 
@@ -130,6 +147,7 @@ export default {
   flex-direction: row;
   width: calc(100% + #{$spacer});
   margin: 0 -$spacer / 2;
+  margin-top: $spacer / 2;
 
   a {
     flex: 1 0;
@@ -137,14 +155,14 @@ export default {
   }
 
   .primary {
-    background: $colour-blue;
-    color: $colour-white;
+    background: $colour-light;
+    color: $colour-dark;
   }
 
   .secondary {
-    border: 2px solid $colour-blue;
-    color: $colour-blue;
-    padding: calc(#{$spacer / 2} - 2px);
+    border: 2px solid $colour-light;
+    color: $colour-dark;
+    padding: calc(#{$spacer / 2} - 4px);
   }
 }
 

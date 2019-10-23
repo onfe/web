@@ -1,8 +1,7 @@
 ---
 title: "Completionist"
 subtitle: "OSS autocomplete engine"
-description: "An open-source autocomplete engine, written in C++. Lightning fast
-Memory efficient."
+description: "A memory-aware lightning-fast autocomplete engine, written in C++."
 date: 2019-04-04
 featured: true
 image: "completionist.png"

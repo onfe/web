@@ -1,7 +1,7 @@
 ---
 title: "BeautiSearch"
 subtitle: "The new, new tab."
-description: "Use the search providers you love, in a sleek new style. A static site enhanced with vanilla JS."
+description: "Use the search you love, in a sleek new style. A static site enhanced with vanilla JS."
 date: 2018-04-28
 image: "beautisearch.jpg"
 url: "https://www.beautisear.ch"

@@ -26,6 +26,9 @@ export const actions = {
         const post = postFiles(key)
         post.attributes.slug = key.slice(2, -3)
         post.attributes.date = new Date(post.attributes.date)
+        post.attributes.words = post.body.split(' ').length
+        post.attributes.mins = Math.round(post.attributes.words / 265)
+        console.log(post.body.split(' ').length)
         return post
       })
       .sort((a, b) => {

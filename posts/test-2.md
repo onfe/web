@@ -1,7 +1,9 @@
 ---
 title: A Second Test Article
 date: 2000-2-24
-description: A description, of sorts. Something about the article.
+lead: A description, of sorts. Something about the article.
+brief: Haec corpore, pars amantes, est variatus solet; quam atque; late. Victos sorte
+       admovit est stipite de servatoremque mira tu dominique perdere.
 ---
 # Retro carcere eminus
 

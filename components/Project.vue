@@ -10,7 +10,7 @@
         <p class="lead">
           {{ subtitle }}
         </p>
-        <p>
+        <p class="detail">
           {{ description }}
         </p>
         <div class="links">
@@ -117,12 +117,18 @@ export default {
 .info {
   padding-top: $spacer;
   height: auto;
+  display: flex;
+  flex-direction: column;
 
   @include sm {
     padding: 0;
     padding-left: $spacer;
     flex: 1 1 60%;
   }
+}
+
+.detail {
+  flex: 1;
 }
 
 .links {
@@ -142,7 +148,7 @@ export default {
   }
 
   .secondary {
-    border: 2px solid $colour-blue;
+    border: 1px solid $colour-blue;
     color: $colour-blue;
     padding: calc(#{$spacer / 2} - 2px);
   }

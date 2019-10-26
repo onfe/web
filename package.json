@@ -1,8 +1,8 @@
 {
   "name": "Onfe",
   "version": "1.0.0",
-  "description": "My Personal Site",
-  "author": "Edward",
+  "description": "Edward Hails | Intensely curious digital experiences.",
+  "author": "Edward Hails",
   "private": true,
   "scripts": {
     "dev": "nuxt",

@@ -28,7 +28,7 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#0096ff' },
+  loading: { color: '#ffde00' },
   /*
    ** Global CSS
    */
@@ -83,6 +83,14 @@ export default {
       // default size if unspecified
       size: 650,
       adapter: require('responsive-loader/jimp')
+    }
+  },
+  /*
+   ** PWA configuration
+   */
+  pwa: {
+    manifest: {
+      theme_color: '#001020'
     }
   },
   /*

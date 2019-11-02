@@ -4,7 +4,10 @@
       <Gooey class="aside" />
     </client-only>
     <div class="container hero">
-      <div class="focus">Intensely curious digital experiences.</div>
+      <div class="focus">
+        <p class="title">Hi, I'm <span class="special">Edward Hails</span>,</p>
+        <p>an IoT, Vue.js and C++ developer.</p>
+      </div>
     </div>
   </section>
 </template>
@@ -48,8 +51,32 @@ section {
 }
 
 .focus {
-  font-size: 1.5em;
+  font-size: 1em;
   width: 66%;
+  z-index: 0;
+
+  .title {
+    font-size: 1.75em;
+  }
+
+  .special {
+    position: relative;
+    color: $colour-yellow;
+    white-space: nowrap;
+  }
+
+  p {
+    margin: 0;
+    z-index: 5;
+  }
+
+  @include sm {
+    font-size: 1.25em;
+  }
+
+  @include lg {
+    font-size: 1.5em;
+  }
 }
 
 .extra {

@@ -18,17 +18,18 @@
 </template>
 
 <script>
-import Gooey from '@/assets/js/gooey.js'
-
 export default {
   data() {
     return {
       goo: null
     }
   },
-  mounted() {
+  async mounted() {
     const canvas = document.getElementById('js-goo-anim')
-    this.goo = new Gooey(canvas)
+    const Gooey = await import('@/assets/js/gooey.js')
+    console.log(Gooey.default)
+    // eslint-disable-next-line
+    this.goo = new Gooey.default(canvas)
   },
   destroyed() {
     this.goo.unhook()

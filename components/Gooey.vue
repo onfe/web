@@ -26,10 +26,8 @@ export default {
   },
   async mounted() {
     const canvas = document.getElementById('js-goo-anim')
-    const Gooey = await import('@/assets/js/gooey.js')
-    console.log(Gooey.default)
-    // eslint-disable-next-line
-    this.goo = new Gooey.default(canvas)
+    const Gooey = (await import('@/assets/js/gooey.js')).default
+    this.goo = new Gooey(canvas)
   },
   destroyed() {
     this.goo.unhook()

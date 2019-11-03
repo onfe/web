@@ -13,6 +13,10 @@
 
 // Code
 pre, code, samp {
+
+  * {
+    font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  }
   font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   background: #fafafa;
   font-size: 0.875rem;

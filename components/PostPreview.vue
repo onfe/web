@@ -1,6 +1,6 @@
 er<template lang="html">
   <article class="card">
-    <nuxt-link class="card-body" :to="`/blog/p/${slug}`">
+    <nuxt-link class="card-body" :to="`/blog/p/${slug}/`">
       <div class="titlebar">
         <h2>{{ title }}</h2>
         <span class="meta">{{ mins }} min read • {{ formattedDate }}</span>

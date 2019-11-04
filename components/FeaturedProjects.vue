@@ -1,6 +1,6 @@
 <template>
   <section>
-    <HeadingMore title="Featured Projects" more="/projects" />
+    <HeadingMore title="Featured Projects" more="/projects/" />
     <div id="feat-proj" class="container projects">
       <ProjectCard
         v-for="(project, key) in projects"

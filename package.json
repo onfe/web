@@ -24,6 +24,7 @@
     "@nuxtjs/axios": "^5.8.0",
     "@nuxtjs/markdownit": "^1.2.7",
     "@nuxtjs/pwa": "^3.0.0-0",
+    "@nuxtjs/sitemap": "^2.0.0",
     "front-matter": "^3.0.2",
     "frontmatter-markdown-loader": "^2.3.0",
     "glob": "^7.1.5",

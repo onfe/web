@@ -9,3 +9,6 @@ https://onfe.netlify.com/* https://onfe.uk/:splat 301!
 
 # Redirect old autoexec project to explainer post
 /projects/autoexec /blog/p/wheres-the-autoexec-creator/
+
+# Redirect empty post requests to the blog
+/blog/p /blog

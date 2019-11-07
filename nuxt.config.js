@@ -63,7 +63,8 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
-    '@bazzite/nuxt-optimized-images'
+    '@bazzite/nuxt-optimized-images',
+    '@nuxtjs/sitemap'
   ],
   /*
    ** Axios module configuration
@@ -87,6 +88,12 @@ export default {
       size: 650,
       adapter: require('responsive-loader/jimp')
     }
+  },
+  sitemap: {
+    hostname: 'https://onfe.uk',
+    exclude: [
+      '/blog/p'
+    ]
   },
   /*
    ** PWA configuration

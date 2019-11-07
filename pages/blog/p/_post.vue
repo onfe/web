@@ -42,7 +42,14 @@ export default {
   },
   head() {
     return {
-      title: this.attributes.title
+      title: this.attributes.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.attributes.lead
+        }
+      ]
     }
   }
 }

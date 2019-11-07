@@ -25,6 +25,11 @@ export default {
     HeroTitle,
     Project
   },
+  head() {
+    return {
+      title: 'Projects'
+    }
+  },
   computed: {
     projects() {
       return this.$store.state.projects

@@ -93,7 +93,8 @@ export default {
     hostname: 'https://onfe.uk',
     exclude: [
       '/blog/p'
-    ]
+    ],
+    trailingSlash: true
   },
   /*
    ** PWA configuration

@@ -25,6 +25,11 @@ export default {
   flex-direction: column;
 }
 
+html {
+  margin-right: calc(0px - calc(100vw - 100%));
+  overflow-x: hidden;
+}
+
 .content {
   flex: 1 0 auto;
 }

@@ -6,7 +6,7 @@
       <hr />
     </div>
     <article class="container">
-      <Markticle :markdown="markdown.vue"></Markticle>
+      <Markticle :markdown="markdown.vue" />
     </article>
     <div class="container after">
       <n-link class="more" to="/blog">Back to Blog</n-link>

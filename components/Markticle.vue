@@ -52,4 +52,9 @@ pre {
   padding: $spacer;
   border-radius: $spacer / 2;
 }
+
+h1 {
+  font-size: 1.75em;
+  font-weight: 500;
+}
 </style>

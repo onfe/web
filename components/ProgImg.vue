@@ -1,8 +1,6 @@
 <template>
-  <div class="prog-image">
-    <div v-lazy-container="{ selector: 'img' }" :style="rStyle" :class="rClass">
-      <img :data-src="imgSrc" :data-loading="lqip" :src="lqip" />
-    </div>
+  <div v-lazy-container="{ selector: 'img' }" class="prog-image">
+    <img :data-src="imgSrc" :data-loading="sqip" :src="sqip" />
   </div>
 </template>
 
@@ -16,56 +14,29 @@ export default {
     size: {
       type: Number,
       default: -1
-    },
-    ratio: {
-      type: Number,
-      default: -1
     }
   },
   computed: {
-    lqip() {
-      return require('~/assets/img/' + this.src + '?lqip')
+    sqip() {
+      return require('~/assets/img/' + this.src + '?sqip')
     },
     imgSrc() {
       return require('~/assets/img/' + this.src + '?resize')
-    },
-    rStyle() {
-      const perc = (1 / this.ratio) * 100
-      return this.ratio > 0 ? `padding-bottom: ${perc}%;` : ''
-    },
-    rClass() {
-      return (this.ratio > 0 ? 'ratio' : 'noRatio') + ' ratioWrap'
     }
   }
 }
 </script>
 
 <style scoped lang="scss">
-.ratioWrap {
-  box-sizing: border-box;
-  width: 100%;
+.prog-image {
   overflow: hidden;
-  position: relative;
-
-  &.ratio {
-    box-sizing: content-box;
-    height: 0;
-  }
-
-  &.ratio > img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-  }
 }
 
 img {
   width: 100%;
   overflow: hidden;
   object-fit: cover;
+  display: block;
 
   &:not([lazy='loaded']) {
     filter: blur(5px);

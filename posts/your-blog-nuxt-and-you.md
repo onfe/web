@@ -47,23 +47,23 @@ const md = require('markdown-it')({
 // ...
 
 build: {
-	extend(config, { isDev, isClient }) {
-        // Load markdown as Vue components.
-        config.module.rules.push({
-            test: /\.md$/,
-            loader: 'frontmatter-markdown-loader',
-            options: {
-                // We want render functions so that they can SSR'd by Nuxt.
-                // Mode.BODY is optional, and only required if you want the
-                // raw markdown to be available.
-                mode: [Mode.VUE_RENDER_FUNCTIONS, Mode.BODY],
-             	// Provide the markdown-it instance to render the markdown.
-                markdown: (body) => {
-                    return md.render(body)
-                }
-            }
-        });
-    }
+  extend(config, { isDev, isClient }) {
+    // Load markdown as Vue components.
+    config.module.rules.push({
+      test: /\.md$/,
+      loader: 'frontmatter-markdown-loader',
+      options: {
+        // We want render functions so that they can SSR'd by Nuxt.
+        // Mode.BODY is optional, and only required if you want the
+        // raw markdown to be available.
+        mode: [Mode.VUE_RENDER_FUNCTIONS, Mode.BODY],
+      	// Provide the markdown-it instance to render the markdown.
+        markdown: (body) => {
+          return md.render(body)
+        }
+      }
+    });
+  }
 },
 ```
 
@@ -114,10 +114,10 @@ As our markdown does not exist as a `.vue` file within the `/pages/` directory, 
 
 ### File finding
 
-We can find our files using a regular expression, and then convert the filenames into the routes used to access posts. I created a file `get-posts.js` that deals with finding posts and creating the routes.
+We can find our files using a [glob pattern](https://en.wikipedia.org/wiki/Glob_(programming)), and then convert the filenames into the routes used to access posts. I created a file `get-posts.js` that deals with finding posts and creating the routes.
 
 ```javascript
-const glob = require('glob');
+const glob = require('glob')
 
 const postPaths = glob.sync('**/*.md', { cwd: 'posts' })
 
@@ -128,9 +128,7 @@ function getSlug(path) {
 
 const posts = postPaths.map(getSlug)
 
-export default {
-  get() { return posts }
-}
+export default posts
 ```
 
 As I want to have my posts under `/blog/p/post-title`, I use glob to find the files within the `/posts/` directory, and form the slugs.
@@ -140,12 +138,10 @@ As I want to have my posts under `/blog/p/post-title`, I use glob to find the fi
 Nuxt now just needs these routes to be appended to the ones it generates and this can be done in `nuxt.config.js`.
 
 ```javascript
-import getPosts from './plugins/get-posts.js'
+import posts from './plugins/get-posts.js'
 
 generate: {
-    routes: function() {
-        return getPosts.get()
-    }
+  routes: posts
 }
 ```
 
@@ -157,11 +153,11 @@ To determine what article you're requesting, the route parameter `post` includes
 
 ```javascript
 data() {
-    const markdown = require('@/posts/' + this.$route.params.post + '.md')
-    return {
-    	markdown,
-    	attributes: markdown.attributes
-    }
+  const markdown = require('@/posts/' + this.$route.params.post + '.md')
+  return {
+    markdown,
+    attributes: markdown.attributes
+  }
 }
 ```
 
@@ -191,4 +187,3 @@ I'm not entirely happy with my implementation yet - there's still some work to d
 I hope you've found this useful - I spent quite some tinkering to find a good solution but there may still be improvements to be made. Feel free to get in touch if you've got any queries over on [Twitter](https://twitter.com/onfe1), and the source code for this site is available on [GitHub](https://github.com/onfe/web) so you can see how it all ties together.
 
 Thanks for reading and best wishes for 2020. 🎉
-

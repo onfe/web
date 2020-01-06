@@ -26,14 +26,14 @@ export default {
     HeroTitle,
     PostPreview
   },
-  head() {
-    return {
-      title: 'Blog'
-    }
-  },
   computed: {
     posts() {
       return this.$store.state.posts
+    }
+  },
+  head() {
+    return {
+      title: 'Blog'
     }
   }
 }

@@ -2,7 +2,7 @@
   <footer>
     <div class="container footer">
       <div class="left">
-        &copy; Edward Hails (<a href="/keybase.txt">Verify</a>) 2019
+        &copy; Edward Hails (<a href="/keybase.txt">Verify</a>) {{ year }}
       </div>
       <div class="center">
         <n-link to="/"><div class="onfe">O</div></n-link>
@@ -15,6 +15,16 @@
     </div>
   </footer>
 </template>
+
+<script>
+export default {
+  computed: {
+    year() {
+      return new Date().getFullYear()
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 footer {

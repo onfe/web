@@ -1,6 +1,7 @@
-# web
+# Onfe - My personal site.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/26d517e6-99e3-4db7-88c7-cd8938f1efba/deploy-status)](https://app.netlify.com/sites/onfe/deploys)
 
-> My Personal Site
+Built on Nuxt, with markdown compilation and lazy-progressive images as standard.
 
 ## Build Setup
 

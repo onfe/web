@@ -1,5 +1,5 @@
-import getPosts from './plugins/get-posts.js'
 import Mode from 'frontmatter-markdown-loader/mode'
+import posts from './plugins/get-posts.js'
 
 const md = require('markdown-it')({
   html: true,
@@ -12,15 +12,15 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: "Onfe",
-    titleTemplate: "%s :: Onfe",
+    title: 'Onfe',
+    titleTemplate: '%s :: Onfe',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ""
+        content: process.env.npm_package_description || ''
       }
     ],
     link: [
@@ -35,10 +35,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [
-    '@/assets/scss/mixins.scss',
-    '@/assets/scss/styles.scss'
-  ],
+  css: ['@/assets/scss/mixins.scss', '@/assets/scss/styles.scss'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -74,9 +71,7 @@ export default {
   // Style functions and mixins that need to be available to all components
   // essentially an @import at the start of the scss for each component.
   styleResources: {
-    scss: [
-      'assets/scss/mixins.scss'
-    ]
+    scss: ['assets/scss/mixins.scss']
   },
   // Optimize images
   optimizedImages: {
@@ -91,9 +86,7 @@ export default {
   },
   sitemap: {
     hostname: 'https://onfe.uk',
-    exclude: [
-      '/blog/p'
-    ],
+    exclude: ['/blog/p'],
     trailingSlash: true
   },
   /*
@@ -111,23 +104,21 @@ export default {
     /*
      ** You can extend webpack config here
      */
-     extend(config, { isDev, isClient }) {
-       // Load markdown as Vue components.
-       config.module.rules.push({
-         test: /\.md$/,
-         loader: 'frontmatter-markdown-loader',
-         options: {
-           mode: [Mode.VUE_RENDER_FUNCTIONS, Mode.BODY],
-           markdown: (body) => {
-             return md.render(body)
-           }
-         }
-       });
-     }
+    extend(config) {
+      // Load markdown as Vue components.
+      config.module.rules.push({
+        test: /\.md$/,
+        loader: 'frontmatter-markdown-loader',
+        options: {
+          mode: [Mode.VUE_RENDER_FUNCTIONS, Mode.BODY],
+          markdown: (body) => {
+            return md.render(body)
+          }
+        }
+      })
+    }
   },
   generate: {
-    routes: function() {
-      return getPosts.get()
-    }
+    routes: posts
   }
 }

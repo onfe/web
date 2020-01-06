@@ -9,6 +9,4 @@ function getSlug(path) {
 
 const posts = postPaths.map(getSlug)
 
-export default {
-  get() { return posts }
-}
+export default posts;

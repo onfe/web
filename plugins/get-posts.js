@@ -1,4 +1,4 @@
-const glob = require('glob');
+const glob = require('glob')
 
 const postPaths = glob.sync('**/*.md', { cwd: 'posts' })
 
@@ -9,4 +9,4 @@ function getSlug(path) {
 
 const posts = postPaths.map(getSlug)
 
-export default posts;
+export default posts

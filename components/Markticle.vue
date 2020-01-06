@@ -50,7 +50,14 @@ export default {
 
 pre {
   padding: $spacer;
+  box-shadow: $subtle-shadow inset;
   border-radius: $spacer / 2;
+}
+
+:not(pre) > code {
+  padding: $spacer / 8 $spacer / 4;
+  box-shadow: $subtle-shadow inset;
+  border-radius: $spacer / 4;
 }
 
 h1 {

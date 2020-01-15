@@ -57,17 +57,12 @@ export default {
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
     '@bazzite/nuxt-optimized-images',
     '@nuxtjs/sitemap'
   ],
-  /*
-   ** Axios module configuration
-   ** See https://axios.nuxtjs.org/options
-   */
-  axios: {},
+
   // Style functions and mixins that need to be available to all components
   // essentially an @import at the start of the scss for each component.
   styleResources: {

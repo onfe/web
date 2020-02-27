@@ -28,7 +28,6 @@ export default {
       setTimeout(this.cleanup.bind(this), 50)
     },
     enter(e) {
-      console.log("new")
       const wasEmpty = this.state === 'empty';
       this.state = 'full';
       if (this.oldElem || !e) {
@@ -39,7 +38,6 @@ export default {
       const height = getComputedStyle(e).height
 
       e.style.height = wasEmpty ? `0px` : this.prevHeight;
-      console.log(e.style.height)
 
       setTimeout(() => {
         e.style.height = height;
@@ -52,7 +50,6 @@ export default {
       // when the new portal state does not have any elements,
       // enter will never be called. We cleanup instead.
       if ((this.state === 'waiting') && this.oldElem) {
-        console.log("cleaning")
         this.oldElem.style.opacity = 0;
         this.oldElem.style.height = getComputedStyle(this.oldElem).height;
         this.state = 'empty';

@@ -1,7 +1,9 @@
 <template>
   <div class="titleHero">
-    <div class="container">
-      <h1>{{ title }}</h1>
+    <div class="padding">
+      <div class="container">
+        <h1>{{ title }}</h1>
+      </div>
     </div>
   </div>
 </template>
@@ -24,8 +26,9 @@ export default {
   color: $colour-light;
 }
 
-.container {
-  padding-top: $spacer;
+.padding {
+  padding: $spacer;
+  padding-top: 0;
 }
 
 h1 {

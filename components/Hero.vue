@@ -42,7 +42,7 @@ section {
 
 .hero-wrap {
   position: relative;
-  padding-top: $spacer;
+  padding: 0 $spacer;
   height: 15em;
 
   @include sm {

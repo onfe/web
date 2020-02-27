@@ -1,14 +1,16 @@
 <template>
   <header>
-    <nav class="container">
-      <n-link to="/" class="onfe">
-        ONFE
-      </n-link>
-      <div class="links">
-        <n-link to="/blog/">Blog</n-link>
-        <n-link to="/projects/">Projects</n-link>
-      </div>
-    </nav>
+    <div class="main">
+      <nav class="container">
+        <n-link to="/" class="onfe">
+          ONFE
+        </n-link>
+        <div class="links">
+          <n-link to="/blog/">Blog</n-link>
+          <n-link to="/projects/">Projects</n-link>
+        </div>
+      </nav>
+    </div>
     <portal-target
       class="portal"
       name="header"
@@ -21,9 +23,12 @@
 <style lang="scss" scoped>
 header {
   width: 100%;
-  padding: $spacer;
   background: $colour-dark;
   color: $colour-white;
+}
+
+.main {
+  padding: $spacer;
 }
 
 nav {

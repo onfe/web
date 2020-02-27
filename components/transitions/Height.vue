@@ -64,7 +64,7 @@ export default {
 
 <style lang="scss" scoped>
 .transition-height {
-  overflow: hidden;
+  overflow-y: hidden;
 }
 .height-enter-active,
 .height-leave-active {

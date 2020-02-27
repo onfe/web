@@ -1,6 +1,8 @@
 <template>
   <main>
-    <Hero />
+    <portal to="header">
+      <Hero />
+    </portal>
     <FeaturedProjects />
     <RecentBlog />
   </main>

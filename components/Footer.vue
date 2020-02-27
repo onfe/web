@@ -1,5 +1,6 @@
 <template>
   <footer>
+    <portal-target name="footer"></portal-target>
     <div class="container footer">
       <div class="left">
         &copy; Edward Hails (<a href="/keybase.txt">Verify</a>) {{ year }}

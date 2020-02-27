@@ -22,7 +22,10 @@ export default {
   width: 100%;
   background: $colour-dark;
   color: $colour-light;
-  padding: $spacer;
+}
+
+.container {
+  padding-top: $spacer;
 }
 
 h1 {

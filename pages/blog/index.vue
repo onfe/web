@@ -1,6 +1,8 @@
 <template>
   <main>
-    <HeroTitle title="Blog" />
+    <portal to="header">
+      <HeroTitle title="Blog" />
+    </portal>
     <section>
       <div class="container posts">
         <PostPreview

@@ -9,6 +9,12 @@
         <n-link to="/projects/">Projects</n-link>
       </div>
     </nav>
+    <portal-target
+      class="portal"
+      name="header"
+      transition="TransitionHeight"
+    >
+    </portal-target>
   </header>
 </template>
 

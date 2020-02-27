@@ -39,7 +39,10 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/vue-lazyload'],
+  plugins: [
+    '~/plugins/vue-lazyload',
+    '~/plugins/transitions'
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -60,7 +63,8 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
     '@bazzite/nuxt-optimized-images',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    'portal-vue/nuxt'
   ],
 
   // Style functions and mixins that need to be available to all components

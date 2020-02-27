@@ -1,19 +1,22 @@
 <template>
   <section>
-    <client-only>
-      <Gooey class="aside" />
-    </client-only>
-    <div class="container hero">
-      <div class="focus">
-        <p class="title">Hi, I'm <span class="special">Edward Hails</span>,</p>
-        <p>an IoT, Vue.js and C++ developer.</p>
+    <div class="hero-wrap">
+      <client-only>
+        <Gooey class="aside" />
+      </client-only>
+      <div class="container hero">
+        <div class="focus">
+          <p class="title">Hi, I'm <span class="special">Edward Hails</span>,</p>
+          <p>an IoT, Vue.js and C++ developer.</p>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import Gooey from '~/components/Gooey.vue'
+import Gooey from '~/components/Gooey.vue';
+
 export default {
   components: {
     Gooey
@@ -26,12 +29,7 @@ section {
   position: relative;
   color: $colour-light;
   background: $colour-dark;
-  padding: $spacer;
-  height: 15em;
-
-  @include sm {
-    height: 20em;
-  }
+  overflow: hidden;
 }
 
 .hero {
@@ -40,6 +38,16 @@ section {
   flex-direction: row;
   align-items: center;
   height: 100%;
+}
+
+.hero-wrap {
+  position: relative;
+  padding-top: $spacer;
+  height: 15em;
+
+  @include sm {
+    height: 20em;
+  }
 }
 
 .aside {

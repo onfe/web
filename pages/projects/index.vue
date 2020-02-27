@@ -1,6 +1,8 @@
 <template>
   <main>
-    <HeroTitle title="Projects" />
+    <portal to="header">
+      <HeroTitle title="Projects" />
+    </portal>
     <article>
       <div class="container projects">
         <Project

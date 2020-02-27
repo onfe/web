@@ -38,6 +38,7 @@ export default class Gooey {
   }
 
   render() {
+    this.rescale()
     this.ctx.clearRect(0, 0, this.size.x, this.size.y)
     if (this.nextBall <= 0) {
       const randCol = this.colours[randomInt(this.colours.length - 1)]

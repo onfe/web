@@ -1,28 +1,22 @@
-<template>
+<template functional>
   <header>
-    <div class="main">
-      <nav class="container">
-        <g-link to="/" class="onfe">
-          ONFE
-        </g-link>
-        <div class="links">
-          <g-link to="/blog/">Blog</g-link>
-          <g-link to="/projects/">Projects</g-link>
-        </div>
-      </nav>
-    </div>
+    <nav class="container">
+      <g-link to="/" class="onfe">
+        ONFE
+      </g-link>
+      <div class="links">
+        <g-link to="/blog/">Blog</g-link>
+        <g-link to="/projects/">Projects</g-link>
+      </div>
+    </nav>
   </header>
 </template>
 
 <style lang="scss" scoped>
-@include onfe(".onfe");
 header {
   width: 100%;
   background: var(--colour-header);
   color: var(--colour-text);
-}
-
-.main {
   padding: $spacer;
 }
 

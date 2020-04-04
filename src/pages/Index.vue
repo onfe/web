@@ -1,6 +1,14 @@
 <template>
   <Layout>
-    Body text
+    <div class="long">
+      Body text
+    </div>
+    <div class="long">
+      Body text
+    </div>
+    <div class="long">
+      Body text
+    </div>
   </Layout>
 </template>
 
@@ -12,8 +20,12 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 .home-links a {
   margin-right: 1rem;
+}
+
+.long {
+  padding: 50vh $spacer;
 }
 </style>

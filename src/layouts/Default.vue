@@ -1,25 +1,32 @@
 <template>
-  <div class="layout">
+  <div class="site">
     <Header />
-    <slot />
+    <main>
+      <slot />
+    </main>
+    <Footer />
   </div>
 </template>
 
-<static-query>
-  query {
-    metadata {
-      siteName
-    }
-  }
-</static-query>
-
 <script>
 import Header from "~/components/Header.vue";
+import Footer from "~/components/Footer.vue";
 export default {
   components: {
     Header,
+    Footer,
   },
 };
 </script>
 
-<style></style>
+<style scoped>
+.site {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+</style>

@@ -2,6 +2,7 @@
 @import 'darkmode';
 @import 'typography';
 @import 'layout';
+@import 'onfe';
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
@@ -13,7 +14,7 @@ html {
 }
 
 html, body {
-  min-height: 100%;
+  height: 100%;
   margin: 0;
   background: var(--colour-background);
 }

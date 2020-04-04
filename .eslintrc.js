@@ -1,11 +1,30 @@
 module.exports = {
-  parser: "vue-eslint-parser",
-  extends: ["plugin:gridsome/recommended"],
-  plugins: [
-    "gridsome",
-    "prettier"
+  root: true,
+  env: {
+    node: true,
+  },
+  plugins: ["gridsome"],
+  extends: [
+    "plugin:vue/essential",
+    "plugin:prettier/recommended",
+    "@vue/prettier",
   ],
   rules: {
-    "prettier/prettier": "error"
-  }
-}
+    "no-console": process.env.NODE_ENV === "production" ? "error" : "warn",
+    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "warn",
+  },
+  parserOptions: {
+    parser: "babel-eslint",
+  },
+  overrides: [
+    {
+      files: [
+        "**/__tests__/*.{j,t}s?(x)",
+        "**/tests/unit/**/*.spec.{j,t}s?(x)",
+      ],
+      env: {
+        jest: true,
+      },
+    },
+  ],
+};

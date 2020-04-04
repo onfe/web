@@ -1,26 +1,25 @@
 <template>
   <div class="layout">
     <Header />
-    <slot/>
+    <slot />
   </div>
 </template>
 
 <static-query>
-query {
-  metadata {
-    siteName
+  query {
+    metadata {
+      siteName
+    }
   }
-}
 </static-query>
 
 <script>
-import Header from "~/components/Header.vue"
+import Header from "~/components/Header.vue";
 export default {
   components: {
-    Header
-  }
-}
+    Header,
+  },
+};
 </script>
 
-<style>
-</style>
+<style></style>

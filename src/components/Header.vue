@@ -6,8 +6,8 @@
           ONFE
         </n-link>
         <div class="links">
-          <n-link to="/blog/">Blog</n-link>
-          <n-link to="/projects/">Projects</n-link>
+          <g-link to="/blog/">Blog</g-link>
+          <g-link to="/projects/">Projects</g-link>
         </div>
       </nav>
     </div>
@@ -41,11 +41,13 @@ nav {
 .links a {
   text-decoration: none;
   margin: $spacer / 4;
-  color: var(--colour-text);
+  color: var(--colour-header-text);
   position: relative;
+  text-shadow: -2px 0px 0px var(--colour-header),
+    2px 0px 0px var(--colour-header);
   z-index: 0;
   &::before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     top: calc(100% - 0.1em);

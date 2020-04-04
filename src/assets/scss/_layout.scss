@@ -1,0 +1,13 @@
+@import 'breakpoints';
+@import 'vars';
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  width: 100%;
+
+  @include sm() { max-width: 540px; };
+  @include md() { max-width: 720px; };
+  @include lg() { max-width: 960px; };
+  @include xl() { max-width: 1000px; };
+}

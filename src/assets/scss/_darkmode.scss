@@ -6,11 +6,13 @@ body, body.light {
   --colour-header: #{$colour-dark};
   --colour-background: #{$colour-white};
   --colour-text: #{$colour-black};
+  --colour-header-text: #{$colour-white};
 }
 
 body {
   @media (prefers-color-scheme: dark) {
     --colour-background: #{lighten($colour-dark, 3%)};
+    --colour-header-text: #{$colour-light}
   }
 }
 

@@ -12,10 +12,21 @@ body, body.light {
 body {
   @media (prefers-color-scheme: dark) {
     --colour-background: #{lighten($colour-dark, 3%)};
-    --colour-header-text: #{$colour-light}
+    --colour-header-text: #{$colour-light};
+    --colour-text: #{$colour-light};
   }
 }
 
 body.dark {
+  --colour-background: #{lighten($colour-dark, 3%)};
+  --colour-header-text: #{$colour-light};
+  --colour-text: #{$colour-light};
+}
 
+html, body {
+  color: var(--colour-text);
+}
+
+*, *:before, *:after {
+  color: inherit;
 }

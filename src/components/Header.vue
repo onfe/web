@@ -2,9 +2,9 @@
   <header>
     <div class="main">
       <nav class="container">
-        <n-link to="/" class="onfe">
+        <g-link to="/" class="onfe">
           ONFE
-        </n-link>
+        </g-link>
         <div class="links">
           <g-link to="/blog/">Blog</g-link>
           <g-link to="/projects/">Projects</g-link>

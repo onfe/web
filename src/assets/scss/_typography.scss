@@ -5,3 +5,15 @@
     font-weight: normal;
     font-style: normal;
 }
+
+// Work Sans (Main Text)
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@350&display=swap');
+
+html, body {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 350;
+}
+
+*, *:before, *:after {
+  font-family: inherit;
+}

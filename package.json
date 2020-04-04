@@ -9,5 +9,8 @@
   },
   "dependencies": {
     "gridsome": "^0.7.0"
+  },
+  "devDependencies": {
+    "style-resources-loader": "^1.3.3"
   }
 }

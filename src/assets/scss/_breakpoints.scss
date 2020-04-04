@@ -1,0 +1,16 @@
+// Screen size variables
+$screen-sm-min: 600px;   // Phones
+$screen-md-min: 900px;   // Tablets
+$screen-lg-min: 1200px;  // Desktops (1/2 screen)
+$screen-xl-min: 1800px;  // HD Desktops
+
+// Mixins
+@mixin sm { @media (min-width: #{$screen-sm-min}) {@content;} }
+@mixin md { @media (min-width: #{$screen-md-min}) {@content;} }
+@mixin lg { @media (min-width: #{$screen-lg-min}) {@content;} }
+@mixin xl { @media (min-width: #{$screen-xl-min}) {@content;} }
+
+@mixin lt-sm { @media (max-width: #{$screen-sm-min - 1}) {@content;} }
+@mixin lt-md { @media (max-width: #{$screen-md-min - 1}) {@content;} }
+@mixin lt-lg { @media (max-width: #{$screen-lg-min - 1}) {@content;} }
+@mixin lt-xl { @media (max-width: #{$screen-xl-min - 1}) {@content;} }

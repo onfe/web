@@ -1,0 +1,19 @@
+@import 'colours';
+
+body, body.light {
+  --colour-yellow: #{$colour-yellow};
+  --colour-blue: #{$colour-blue};
+  --colour-header: #{$colour-dark};
+  --colour-background: #{$colour-white};
+  --colour-text: #{$colour-black};
+}
+
+body {
+  @media (prefers-color-scheme: dark) {
+    --colour-background: #{lighten($colour-dark, 3%)};
+  }
+}
+
+body.dark {
+
+}

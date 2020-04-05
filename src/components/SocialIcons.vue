@@ -73,7 +73,7 @@ $colour-social-grouping: $colour-dark-secondary;
   height: 2em;
   padding: $spacer / 2;
   color: $colour-social-grouping;
-  transition: color 400ms ease-in-out;
+  transition: color 300ms ease-in-out;
   position: relative;
 
   &:hover {

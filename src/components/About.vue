@@ -2,7 +2,7 @@
   <section>
     <div class="container">
       <div class="about">
-        <g-image src="~/assets/img/placeholder.png" />
+        <g-image alt="Edward Hails" src="~/assets/img/placeholder.png" />
         <h3>Edward Hails</h3>
         <p class="text">
           yada yada description about me

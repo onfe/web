@@ -3,19 +3,22 @@
 body, body.light {
   --colour-yellow: #{$colour-yellow};
   --colour-blue: #{$colour-blue};
-  --colour-header: #{$colour-dark};
-  --colour-footer: #{$colour-dark};
+
+  --colour-primary: #{$colour-black};
+  --colour-secondary: #{$colour-secondary};
   --colour-background: #{$colour-white};
-  --colour-text: #{$colour-black};
-  --colour-header-text: #{$colour-white};
-  --colour-footer-text: #{$colour-dark-secondary};
+
+  --colour-d-primary: #{$colour-white};
+  --colour-d-secondary: #{$colour-dark-secondary};
+  --colour-d-background: #{$colour-dark};
 }
 
 body {
   @media (prefers-color-scheme: dark) {
-    --colour-background: #{lighten($colour-dark, 3%)};
-    --colour-header-text: #{$colour-light};
-    --colour-text: #{$colour-light};
+    --colour-background: #{$colour-darkish};
+    --colour-d-primary: #{$colour-light};
+    --colour-primary: #{$colour-light};
+    --colour-secondary: #{$colour-dark-secondary};
   }
 }
 
@@ -23,12 +26,4 @@ body.dark {
   --colour-background: #{lighten($colour-dark, 3%)};
   --colour-header-text: #{$colour-light};
   --colour-text: #{$colour-light};
-}
-
-html, body {
-  color: var(--colour-text);
-}
-
-*, *:before, *:after {
-  color: inherit;
 }

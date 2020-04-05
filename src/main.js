@@ -1,3 +1,4 @@
+import "./plugins/fontawesome-vue";
 require("~/assets/scss/styles.scss");
 
 import DefaultLayout from "~/layouts/Default.vue";

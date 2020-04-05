@@ -6,7 +6,9 @@
       </client-only>
       <div class="container hero">
         <div class="focus">
-          <p class="title">Hi, I'm <span class="special">Edward Hails</span>,</p>
+          <p class="title">
+            Hi, I'm <span class="special">Edward Hails</span>,
+          </p>
           <p>an IoT, Vue.js and C++ developer.</p>
         </div>
       </div>
@@ -15,20 +17,20 @@
 </template>
 
 <script>
-import Gooey from '~/components/Gooey.vue';
+import Gooey from "~/components/Gooey.vue";
 
 export default {
   components: {
-    Gooey
-  }
-}
+    Gooey,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 section {
   position: relative;
-  color: var(--colour-header-text);
-  background: var(--colour-header);
+  color: var(--colour-d-primary);
+  background: var(--colour-d-background);
   overflow: hidden;
 }
 

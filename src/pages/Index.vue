@@ -14,10 +14,10 @@
 </template>
 
 <script>
-import Hero from '~/components/Hero.vue';
+import Hero from "~/components/Hero.vue";
 export default {
   components: {
-    Hero
+    Hero,
   },
   metaInfo: {
     title: "Hello, world!",

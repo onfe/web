@@ -11,10 +11,12 @@ html {
 }
 *, *:before, *:after {
   box-sizing: inherit;
+  color: inherit;
 }
 
 html, body {
   height: 100%;
   margin: 0;
   background: var(--colour-background);
+  color: var(--colour-primary);
 }

@@ -15,8 +15,8 @@
 <style lang="scss" scoped>
 header {
   width: 100%;
-  background: var(--colour-header);
-  color: var(--colour-text);
+  background: var(--colour-d-background);
+  color: var(--colour-d-primary);
   padding: $spacer;
 }
 
@@ -35,10 +35,10 @@ nav {
 .links a {
   text-decoration: none;
   margin: $spacer / 4;
-  color: var(--colour-header-text);
+  color: var(--colour-d-primary);
   position: relative;
-  text-shadow: -2px 0px 0px var(--colour-header),
-    2px 0px 0px var(--colour-header);
+  text-shadow: -2px 0px 0px var(--colour-d-background),
+    2px 0px 0px var(--colour-d-background);
   z-index: 0;
   &::before {
     content: "";

@@ -21,25 +21,25 @@
 export default {
   data() {
     return {
-      goo: null
-    }
+      goo: null,
+    };
   },
   async mounted() {
-    const Gooey = (await import('~/assets/js/gooey.js')).default
+    const Gooey = (await import("~/assets/js/gooey.js")).default;
     this.goo = new Gooey(this.$refs["canvas"]);
   },
   destroyed() {
     if (this.goo) {
       this.goo.unhook();
     }
-  }
-}
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 canvas {
-  -webkit-filter: url('#goo-filter');
-  filter: url('#goo-filter');
+  -webkit-filter: url("#goo-filter");
+  filter: url("#goo-filter");
   height: 100%;
   width: 100%;
   @include sm {
@@ -54,6 +54,19 @@ canvas {
   left: 0;
   height: 100%;
   width: 100%;
+  background: linear-gradient(
+      var(--colour-d-background) 0%,
+      #0000 calc(0% + 1em),
+      #0000 calc(100% - 1em),
+      var(--colour-d-background) 100%
+    ),
+    linear-gradient(
+      90deg,
+      var(--colour-d-background) 0%,
+      #0000 calc(0% + 1em),
+      #0000 calc(100% - 1em),
+      var(--colour-d-background) 100%
+    );
 }
 
 .goo {

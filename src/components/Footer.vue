@@ -29,8 +29,8 @@ export default {
 <style lang="scss" scoped>
 footer {
   padding: $spacer;
-  background: var(--colour-header);
-  color: var(--colour-footer-text);
+  background: var(--colour-d-background);
+  color: var(--colour-d-secondary);
 }
 
 .footer {

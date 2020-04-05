@@ -10,8 +10,9 @@
 </template>
 
 <script>
-import About from "~/components/About.vue";
 import Header from "~/components/Header.vue";
+const About = () =>
+  import(/* webpackChunkName: "about" */ "~/components/About.vue");
 import Footer from "~/components/Footer.vue";
 export default {
   components: {

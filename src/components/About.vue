@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <section>
     <div class="container">
       <div class="about">
@@ -17,8 +17,8 @@
 import Social from "~/components/SocialIcons.vue";
 export default {
   components: {
-    Social,
-  },
+    Social
+  }
 };
 </script>
 

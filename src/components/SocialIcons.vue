@@ -1,4 +1,4 @@
-<template lang="html">
+<template functional>
   <div class="social">
     <div class="collection" group="ID">
       <a class="item" aria-label="Keybase" style="--hovcol: #ff6f21;" href="#"
@@ -26,10 +26,6 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {};
-</script>
 
 <style lang="scss" scoped>
 $colour-social-grouping: $colour-dark-secondary;

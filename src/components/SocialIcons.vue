@@ -1,26 +1,26 @@
 <template lang="html">
   <div class="social">
     <div class="collection" group="ID">
-      <a class="item" style="--hovcol: #ff6f21;" href="#"
+      <a class="item" aria-label="Keybase" style="--hovcol: #ff6f21;" href="#"
         ><font-awesome-icon :icon="['fab', 'keybase']"
       /></a>
     </div>
     <div class="collection" group="Social">
-      <a class="item" style="--hovcol: #1da1f3;" href="#"
+      <a class="item" aria-label="Twitter" style="--hovcol: #1da1f3;" href="#"
         ><font-awesome-icon :icon="['fab', 'twitter']"
       /></a>
-      <a class="item" style="--hovcol: #ff0000;" href="#"
+      <a class="item" aria-label="YouTube" style="--hovcol: #ff0000;" href="#"
         ><font-awesome-icon :icon="['fab', 'youtube']"
       /></a>
-      <a class="item" style="--hovcol: #0a66c2;" href="#"
+      <a class="item" aria-label="LinkedIn" style="--hovcol: #0a66c2;" href="#"
         ><font-awesome-icon :icon="['fab', 'linkedin']"
       /></a>
     </div>
     <div class="collection" group="Portfolio">
-      <a class="item" style="--hovcol: #fff;" href="#"
+      <a class="item" aria-label="GitHub" style="--hovcol: #fff;" href="#"
         ><font-awesome-icon :icon="['fab', 'github']"
       /></a>
-      <a class="item" style="--hovcol: #fc9403;" href="#"
+      <a class="item" aria-label="GitLab" style="--hovcol: #fc9403;" href="#"
         ><font-awesome-icon :icon="['fab', 'gitlab']"
       /></a>
     </div>

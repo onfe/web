@@ -4,9 +4,11 @@ body, body.light {
   --colour-yellow: #{$colour-yellow};
   --colour-blue: #{$colour-blue};
   --colour-header: #{$colour-dark};
+  --colour-footer: #{$colour-dark};
   --colour-background: #{$colour-white};
   --colour-text: #{$colour-black};
   --colour-header-text: #{$colour-white};
+  --colour-footer-text: #{$colour-dark-secondary};
 }
 
 body {

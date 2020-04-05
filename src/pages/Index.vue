@@ -1,5 +1,6 @@
 <template>
   <Layout>
+    <Hero />
     <div class="long">
       Body text
     </div>
@@ -13,7 +14,11 @@
 </template>
 
 <script>
+import Hero from '~/components/Hero.vue';
 export default {
+  components: {
+    Hero
+  },
   metaInfo: {
     title: "Hello, world!",
   },

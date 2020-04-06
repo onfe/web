@@ -2,7 +2,8 @@
   <footer>
     <div class="container footer">
       <div class="left">
-        &copy; Edward Hails (<a href="/keybase.txt">Verify</a>) {{ new Date().getFullYear() }}
+        &copy; Edward Hails (<a href="/keybase.txt">Verify</a>)
+        {{ new Date().getFullYear() }}
       </div>
       <div class="center">
         <g-link to="/"><div class="onfe">O</div></g-link>

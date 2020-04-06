@@ -4,14 +4,12 @@ module.exports = {
   siteName: "Onfe",
   plugins: [
     {
-      use: '@gridsome/source-filesystem',
+      use: "@gridsome/source-filesystem",
       options: {
-        path: '**/post.md',
-        baseDir: './content/posts/',
-        typeName: 'Post',
-        route: '/blog/p/:title'
-      }
-    }
+        path: "./content/posts/*/index.md",
+        typeName: "Post",
+      },
+    },
   ],
   chainWebpack(config) {
     // Load global scss variables
@@ -20,5 +18,8 @@ module.exports = {
     types.forEach((type) => {
       addStyleResource(config.module.rule("scss").oneOf(type));
     });
+  },
+  templates: {
+    Post: "/blog/p/:title",
   },
 };

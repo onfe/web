@@ -2,7 +2,7 @@
   <div>
     <div class="container split">
       <h2>{{ title }}</h2>
-      <g-link :to="more" class="more">more<span>→</span></g-link>
+      <g-link :to="link" class="more">more<span>→</span></g-link>
     </div>
   </div>
 </template>
@@ -11,9 +11,9 @@
 export default {
   props: {
     title: String,
-    link: String
-  }
-}
+    link: String,
+  },
+};
 </script>
 
 <style scoped lang="scss">
@@ -42,6 +42,5 @@ export default {
   &:hover > span {
     transform: translate($spacer / 2);
   }
-
 }
 </style>

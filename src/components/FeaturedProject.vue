@@ -1,20 +1,22 @@
 <template>
   <section>
     <HeadingMore class="heading" title="Featured Project" link="#" />
-    <div class="container card">
+    <div class="container">
+      <a class="card" href="#">
         <g-image src="~/assets/img/picto-banner.png" />
+      </a>
     </div>
   </section>
 </template>
 
 <script>
-import HeadingMore from '@/components/HeadingMore.vue'
+import HeadingMore from "@/components/HeadingMore.vue";
 
 export default {
   components: {
-    HeadingMore
-  }
-}
+    HeadingMore,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -26,11 +28,8 @@ section {
   padding-bottom: $spacer;
 }
 
-.card {
-  overflow: hidden;
-  img {
-    display: block;
-    width: 100%;
-  }
+.card img {
+  display: block;
+  width: 100%;
 }
 </style>

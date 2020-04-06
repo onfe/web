@@ -17,8 +17,8 @@
 import Social from "~/components/SocialIcons.vue";
 export default {
   components: {
-    Social
-  }
+    Social,
+  },
 };
 </script>
 

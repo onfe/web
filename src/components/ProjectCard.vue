@@ -1,6 +1,6 @@
 <template functional>
   <a :href="props.url" class="card">
-    <g-image :src="props.image" :size="350" class="card-img"/>
+    <g-image :src="props.image" :size="350" class="card-img" />
     <div class="card-body">
       <h3 class="m-0">{{ props.title }}</h3>
       {{ props.subtitle }}
@@ -13,22 +13,22 @@ export default {
   props: {
     title: {
       type: String,
-      default: 'Untitled'
+      default: "Untitled",
     },
     subtitle: {
       type: String,
-      default: 'Untitled Subtitle'
+      default: "Untitled Subtitle",
     },
     image: {
       type: String,
-      default: ''
+      default: "",
     },
     url: {
       type: String,
-      default: '#'
-    }
-  }
-}
+      default: "#",
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

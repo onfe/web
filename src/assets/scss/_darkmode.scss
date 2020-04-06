@@ -13,7 +13,8 @@ body, body.light {
   --colour-d-secondary: #{$colour-dark-secondary};
   --colour-d-background: #{$colour-dark};
 
-  --subtle-shadow: 0 #{$spacer / 2} #{$spacer * 1.5} rgba(0, 0, 0, 0.125);
+  --subtle-shadow: 0 #{$spacer / 3} #{$spacer * 1.5} #0002;
+  --subtle-shadow-pop: 0 #{$spacer / 3} #{$spacer * 1.5} #0003;
 }
 
 body {
@@ -26,7 +27,8 @@ body {
 }
 
 body.dark {
-  --colour-background: #{lighten($colour-dark, 3%)};
-  --colour-header-text: #{$colour-light};
-  --colour-text: #{$colour-light};
+  --colour-background: #{#000810};
+  --colour-d-primary: #{$colour-light};
+  --colour-primary: #{$colour-light};
+  --colour-secondary: #{$colour-dark-secondary};
 }

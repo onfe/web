@@ -2,6 +2,7 @@
   <Layout>
     <Hero />
     <FeaturedProject />
+    <RecentBlog />
     <div class="long">
       Body text
     </div>
@@ -11,10 +12,12 @@
 <script>
 import Hero from "~/components/Hero.vue";
 import FeaturedProject from "~/components/FeaturedProject.vue";
+import RecentBlog from "~/components/RecentBlog.vue";
 export default {
   components: {
     Hero,
-    FeaturedProject
+    FeaturedProject,
+    RecentBlog,
   },
   metaInfo: {
     title: "Hello, world!",

@@ -17,18 +17,17 @@
 </template>
 
 <script>
-import ProjectCard from '@/components/ProjectCard.vue'
-import HeadingMore from '@/components/HeadingMore.vue'
+// import ProjectCard from "@/components/ProjectCard.vue";
+import HeadingMore from "@/components/HeadingMore.vue";
 
 export default {
   components: {
-    ProjectCard,
-    HeadingMore
+    HeadingMore,
   },
   created() {
     console.log($static.project);
-  }
-}
+  },
+};
 </script>
 
 <style lang="scss" scoped>

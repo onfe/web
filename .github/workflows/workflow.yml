@@ -1,0 +1,15 @@
+name: Lighthouse Audit PR
+on: pull_request
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Lighthouse Audit Netlify Deploy Preview
+      uses: jakejarvis/lighthouse-action@master
+      with:
+        netlify_site: 'onfe.netlify.com'
+    - uses: actions/upload-artifact@master
+      with:
+        name: report
+        path: './report'

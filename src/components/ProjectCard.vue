@@ -1,6 +1,11 @@
 <template>
   <a :href="url" class="card" :aria-label="`To ${title}`">
-    <g-image :alt="`${title} - ${subtitle}`" :src="image" :size="350" class="card-img" />
+    <g-image
+      :alt="`${title} - ${subtitle}`"
+      :src="image"
+      :size="350"
+      class="card-img"
+    />
     <div class="card-body">
       <h3>{{ title }}</h3>
       <p>{{ subtitle }}</p>

@@ -22,8 +22,8 @@ export default {
     image: {
       type: Object,
       default() {
-        return {}
-      }
+        return {};
+      },
     },
     url: {
       type: String,
@@ -40,7 +40,6 @@ a {
 }
 
 .card-img {
-
 }
 
 p {

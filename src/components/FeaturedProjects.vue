@@ -40,10 +40,7 @@ import HeadingMore from "~/components/HeadingMore.vue";
 export default {
   components: {
     HeadingMore,
-    ProjectCard
-  },
-  created() {
-    console.log($static.project);
+    ProjectCard,
   },
 };
 </script>

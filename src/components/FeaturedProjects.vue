@@ -1,18 +1,19 @@
 <template>
   <section>
-    <div class="wrap">
-      <HeadingMore title="Featured Projects" link="#" />
-    </div>
-    <div id="feat-proj" class="container projects">
-      <ProjectCard
-        class="card"
-        v-for="edge in $static.projects.edges"
-        :key="edge.id"
-        :image="edge.node.image"
-        :title="edge.node.title"
-        :subtitle="edge.node.subtitle"
-        :url="edge.node.url"
-      />
+    <HeadingMore class="heading" title="Featured Projects" link="#" />
+    <div class="container">
+      <div id="feat-proj" class="projects">
+        <ProjectCard
+          class="card"
+          v-for="edge in $static.projects.edges"
+          :key="edge.id"
+          :image="edge.node.image"
+          :title="edge.node.title"
+          :subtitle="edge.node.subtitle"
+          :url="edge.node.url"
+        />
+        <div class="spacer"><!-- Fix padding being eaten on overflow-x --></div>
+      </div>
     </div>
   </section>
 </template>
@@ -47,19 +48,37 @@ export default {
 
 <style lang="scss" scoped>
 section {
-  padding: $spacer 0;
+  padding: 0 $spacer;
 }
 
-.wrap {
-  padding: 0 $spacer;
+.heading {
+  margin-top: $spacer;
 }
 
 .projects {
   display: flex;
+  position: relative;
   padding: $spacer;
+  margin: 0 #{-$spacer};
   overflow-x: scroll;
   overflow-y: visible;
   justify-content: space-between;
+
+  @include sm {
+    margin: 0;
+    padding: $spacer 0;
+    overflow: visible;
+  }
+}
+
+.spacer {
+  flex-shrink: 0;
+  width: 0.1px;
+  height: 0.1px;
+
+  @include sm {
+    display: none;
+  }
 }
 
 .card {
@@ -70,7 +89,8 @@ section {
   @include sm {
     flex: auto;
 
-    &:last-child {
+    // spacer is 1st last child
+    &:nth-last-child(2) {
       margin: 0;
     }
   }

@@ -21,8 +21,8 @@ import Gooey from "~/components/Gooey.vue";
 
 export default {
   components: {
-    Gooey,
-  },
+    Gooey
+  }
 };
 </script>
 

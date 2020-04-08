@@ -7,7 +7,7 @@ import {
   faYoutube,
   faGithub,
   faGitlab,
-  faLinkedin,
+  faLinkedin
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 

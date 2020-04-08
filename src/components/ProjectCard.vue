@@ -13,23 +13,23 @@ export default {
   props: {
     title: {
       type: String,
-      default: "Untitled",
+      default: "Untitled"
     },
     subtitle: {
       type: String,
-      default: "Untitled Subtitle",
+      default: "Untitled Subtitle"
     },
     image: {
       type: Object,
       default() {
         return {};
-      },
+      }
     },
     url: {
       type: String,
-      default: "#",
-    },
-  },
+      default: "#"
+    }
+  }
 };
 </script>
 

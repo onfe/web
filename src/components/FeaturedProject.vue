@@ -14,8 +14,8 @@ import HeadingMore from "@/components/HeadingMore.vue";
 
 export default {
   components: {
-    HeadingMore,
-  },
+    HeadingMore
+  }
 };
 </script>
 

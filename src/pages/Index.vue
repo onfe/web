@@ -14,10 +14,10 @@ export default {
   components: {
     Hero,
     FeaturedProjects,
-    RecentBlog,
+    RecentBlog
   },
   metaInfo: {
-    title: "Hello, world!",
-  },
+    title: "Hello, world!"
+  }
 };
 </script>

@@ -1,5 +1,5 @@
 <template functional>
-  <div class="social">
+  <div class="social" :class="[data.class, data.staticClass]">
     <div class="collection" group="ID">
       <a class="item" aria-label="Keybase" style="--hovcol: #ff6f21;" href="#"
         ><font-awesome-icon :icon="['fab', 'keybase']"
@@ -29,6 +29,10 @@
 
 <style lang="scss" scoped>
 $colour-social-grouping: $colour-dark-secondary;
+
+.social {
+  margin: 0 #{-$spacer / 2};
+}
 
 .social,
 .collection {

@@ -41,8 +41,8 @@ import HeadingMore from "~/components/HeadingMore.vue";
 export default {
   components: {
     HeadingMore,
-    ProjectCard,
-  },
+    ProjectCard
+  }
 };
 </script>
 

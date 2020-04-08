@@ -21,7 +21,7 @@
 export default {
   data() {
     return {
-      goo: null,
+      goo: null
     };
   },
   async mounted() {
@@ -32,7 +32,7 @@ export default {
     if (this.goo) {
       this.goo.unhook();
     }
-  },
+  }
 };
 </script>
 

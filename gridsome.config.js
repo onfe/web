@@ -7,17 +7,17 @@ module.exports = {
       use: "@gridsome/source-filesystem",
       options: {
         path: "./content/posts/*/index.md",
-        typeName: "Post",
-      },
+        typeName: "Post"
+      }
     },
     {
       use: "@gridsome/source-filesystem",
       options: {
         // resolveAbsolutePaths: true,
         path: "./content/projects/*/index.md",
-        typeName: "Project",
-      },
-    },
+        typeName: "Project"
+      }
+    }
   ],
   chainWebpack(config) {
     // Load global scss variables
@@ -28,6 +28,6 @@ module.exports = {
     });
   },
   templates: {
-    Post: "/blog/p/:title",
-  },
+    Post: "/blog/p/:title"
+  }
 };

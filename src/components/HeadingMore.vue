@@ -11,8 +11,8 @@
 export default {
   props: {
     title: String,
-    link: String,
-  },
+    link: String
+  }
 };
 </script>
 

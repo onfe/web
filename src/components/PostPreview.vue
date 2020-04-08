@@ -17,24 +17,24 @@ export default {
   props: {
     title: {
       type: String,
-      default: "",
+      default: ""
     },
     lead: {
       type: String,
-      default: "",
+      default: ""
     },
     date: {
       type: String,
-      default: -1,
+      default: -1
     },
     path: {
       type: String,
-      default: "",
+      default: ""
     },
     timeToRead: {
       type: Number,
-      default: null,
-    },
+      default: null
+    }
   },
   computed: {
     formattedDate() {
@@ -52,13 +52,13 @@ export default {
         "Sep",
         "Oct",
         "Nov",
-        "Dec",
+        "Dec"
       ];
       const showYear = date.getFullYear() !== new Date().getFullYear();
       const year = showYear ? `, ${date.getFullYear()}` : "";
       return `${months[date.getMonth()]} ${date.getDate()}${year}`;
-    },
-  },
+    }
+  }
 };
 </script>
 

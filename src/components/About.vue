@@ -3,11 +3,14 @@
     <div class="container">
       <div class="about">
         <g-image alt="Edward Hails" src="~/assets/img/placeholder.png" />
-        <h3>Edward Hails</h3>
-        <p class="text">
-          yada yada description about me
+        <h3>About me</h3>
+        <p>
+          I'm <span class="special">Edward Hails</span>; a BSc Computer
+          Scientist, Full Stack Software Engineer and avid tea drinker. I push
+          the limits of modern browsers, tinker in firmware &amp; design
+          beautiful UX.
         </p>
-        <Social />
+        <Social class="social" />
       </div>
     </div>
   </section>
@@ -17,8 +20,8 @@
 import Social from "~/components/SocialIcons.vue";
 export default {
   components: {
-    Social,
-  },
+    Social
+  }
 };
 </script>
 
@@ -29,23 +32,54 @@ section {
   padding: $spacer;
 }
 
+.special {
+  color: var(--colour-yellow);
+}
+
 .about {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  width: 100%;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "I" "T" "P" "S";
+  justify-items: center;
   align-items: center;
+  grid-gap: $spacer;
 
-  *:not(:last-child) {
-    margin-bottom: $spacer;
+  @include sm {
+    justify-items: flex-start;
+    grid-template-areas: "I T" "I P" "I S";
   }
 
-  p {
-    margin: 0;
+  /deep/ .social {
+    grid-area: S;
   }
+}
 
-  img {
-    width: 4 * $spacer;
-    height: 4 * $spacer;
-    border-radius: 100%;
+img {
+  grid-area: I;
+  width: 4 * $spacer;
+  height: 4 * $spacer;
+  border-radius: 100%;
+
+  @include sm {
+    margin-right: $spacer;
+    width: 8 * $spacer;
+    height: 8 * $spacer;
+  }
+}
+
+h3 {
+  grid-area: T;
+  font-size: 1.5rem;
+}
+
+p {
+  grid-area: P;
+  text-align: center;
+  margin: 0;
+
+  @include sm {
+    text-align: left;
   }
 }
 </style>

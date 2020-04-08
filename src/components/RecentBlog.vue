@@ -35,8 +35,8 @@ import PostPreview from "@/components/PostPreview.vue";
 export default {
   components: {
     HeadingMore,
-    PostPreview,
-  },
+    PostPreview
+  }
 };
 </script>
 

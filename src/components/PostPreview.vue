@@ -3,7 +3,7 @@
     <article class="card-body">
       <div class="titlebar">
         <h3>{{ title }}</h3>
-        <div class="meta">{{ timeToRead }} min read • {{ formattedDate }}</div>
+        <div class="meta">{{ timeToRead }} min read • {{ fDate }}</div>
       </div>
       <p v-if="lead" class="lead">
         {{ lead }}
@@ -13,6 +13,7 @@
 </template>
 
 <script>
+import { formattedDate } from '~/assets/js/utils.js'
 export default {
   props: {
     title: {
@@ -37,26 +38,8 @@ export default {
     }
   },
   computed: {
-    formattedDate() {
-      // eslint-disable-next-line prettier/prettier
-      const date = new Date(this.date)
-      const months = [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Dec"
-      ];
-      const showYear = date.getFullYear() !== new Date().getFullYear();
-      const year = showYear ? `, ${date.getFullYear()}` : "";
-      return `${months[date.getMonth()]} ${date.getDate()}${year}`;
+    fDate() {
+      return formattedDate(this.date)
     }
   }
 };

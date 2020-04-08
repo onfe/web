@@ -14,7 +14,8 @@
     "@fortawesome/vue-fontawesome": "^0.1.9",
     "@gridsome/remark-prismjs": "^0.3.0",
     "eslint-config-prettier": "^6.10.1",
-    "gridsome": "^0.7.0"
+    "gridsome": "^0.7.0",
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
     "@gridsome/source-filesystem": "^0.6.2",

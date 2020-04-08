@@ -3,11 +3,14 @@
 
 article {
   overflow: hidden;
+  padding: $spacer;
+
   pre {
     background: var(--colour-d-background);
     color: var(--colour-d-primary);
     position: relative;
     padding: $spacer 0;
+    border-radius: $spacer / 2;
     width: 100%;
     z-index: 0;
     font-size: 16px;
@@ -21,7 +24,9 @@ article {
       overflow-x: auto;
 
       @include sm {
-        width: calc(100% + #{2*$spacer});
+        width: 100%;
+        margin: 0;
+        padding: 0 $spacer;
       }
     }
 
@@ -36,6 +41,12 @@ article {
       height: 100%;
       transform: translateX(-50vw);
       z-index: -1;
+    }
+
+    @include sm {
+      &::before {
+        display: none;
+      }
     }
   }
 

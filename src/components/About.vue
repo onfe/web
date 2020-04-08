@@ -40,7 +40,7 @@ section {
   display: grid;
   width: 100%;
   grid-template-columns: auto 1fr;
-  grid-template-areas: "I" "T" "P" "S";
+  grid-template-areas: "I I" "T T" "P P" "S S";
   justify-items: center;
   align-items: center;
   grid-gap: $spacer;

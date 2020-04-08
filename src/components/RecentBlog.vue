@@ -2,14 +2,19 @@
   <section>
     <HeadingMore class="heading" title="Latest Posts" more="/blog/" />
     <div class="container">
-      blog
+      <PostPreview
+        class="post"
+        v-for="edge in $static.posts.edges"
+        v-bind:key="edge.id"
+        v-bind="edge.node"
+      />
     </div>
   </section>
 </template>
 
 <static-query>
 query {
-  posts: allPost {
+  posts: allPost(sortBy: "date", order: DESC limit: 2) {
     edges {
       node {
         title
@@ -25,10 +30,12 @@ query {
 
 <script>
 import HeadingMore from "@/components/HeadingMore.vue";
+import PostPreview from "@/components/PostPreview.vue";
 
 export default {
   components: {
     HeadingMore,
+    PostPreview
   },
 };
 </script>
@@ -36,5 +43,13 @@ export default {
 <style scoped lang="scss">
 section {
   padding: $spacer;
+}
+
+.post {
+  margin-bottom: $spacer;
+}
+
+.container {
+  margin-top: $spacer;
 }
 </style>

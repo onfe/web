@@ -1,18 +1,15 @@
-er<template lang="html">
-  <article class="card">
-    <nuxt-link class="card-body" :to="`/blog/p/${slug}/`">
+<template lang="html">
+  <g-link :to="path" class="card">
+    <article class="card-body">
       <div class="titlebar">
-        <h2>{{ title }}</h2>
-        <span class="meta">{{ mins }} min read • {{ formattedDate }}</span>
+        <h3>{{ title }}</h3>
+        <div class="meta">{{ timeToRead }} min read • {{ formattedDate }}</div>
       </div>
       <p v-if="lead" class="lead">
         {{ lead }}
       </p>
-      <p v-if="brief" class="brief">
-        {{ brief }}
-      </p>
-    </nuxt-link>
-  </article>
+    </article>
+  </g-link>
 </template>
 
 <script>
@@ -26,19 +23,15 @@ export default {
       type: String,
       default: "",
     },
-    brief: {
-      type: String,
-      default: "",
-    },
     date: {
-      type: Date,
+      type: String,
       default: -1,
     },
-    slug: {
+    path: {
       type: String,
       default: "",
     },
-    mins: {
+    timeToRead: {
       type: Number,
       default: null,
     },
@@ -46,10 +39,11 @@ export default {
   computed: {
     formattedDate() {
       // eslint-disable-next-line prettier/prettier
+      const date = new Date(this.date)
       const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-      const showYear = this.date.getFullYear() !== new Date().getFullYear();
-      const year = showYear ? `, ${this.date.getFullYear()}` : "";
-      return `${months[this.date.getMonth()]} ${this.date.getDate()}${year}`;
+      const showYear = date.getFullYear() !== new Date().getFullYear();
+      const year = showYear ? `, ${date.getFullYear()}` : "";
+      return `${months[date.getMonth()]} ${date.getDate()}${year}`;
     },
   },
 };
@@ -60,15 +54,17 @@ export default {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  .meta {
+    margin-top: $spacer / 2;
+  }
 
   @include sm {
     flex-direction: row;
-    align-items: center;
-  }
+    align-items: flex-start;
 
-  h2 {
-    margin: 0;
-    font-size: 1.25em;
+    .meta {
+      margin: 0;
+    }
   }
 }
 
@@ -83,12 +79,12 @@ a {
 
 .lead {
   margin: 0;
-  margin-top: 0.5em;
-  color: $colour-secondary;
+  margin-top: $spacer / 2;
+  color: var(--colour-secondary);
 }
 
 .meta {
-  color: $colour-secondary;
+  color: var(--colour-secondary);
   font-size: 0.825em;
   flex-shrink: 0;
 }

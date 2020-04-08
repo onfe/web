@@ -29,6 +29,8 @@ section {
 }
 
 .card img {
+  min-height: 10em;
+  object-fit: cover;
   display: block;
   width: 100%;
 }

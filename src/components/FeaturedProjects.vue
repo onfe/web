@@ -1,28 +1,46 @@
 <template>
   <section>
-    <HeadingMore title="Featured Projects" link="#" />
+    <div class="wrap">
+      <HeadingMore title="Featured Projects" link="#" />
+    </div>
     <div id="feat-proj" class="container projects">
-      <!-- <ProjectCard
-        v-for="(project, key) in []"
-        :key="key"
-        :class="{ last: key == projects.length - 1 }"
-        :image="project.attributes.image"
-        :title="project.attributes.title"
-        :subtitle="project.attributes.subtitle"
-        :url="project.attributes.url"
-      /> -->
-      <div class="spacer"></div>
+      <ProjectCard
+        class="card"
+        v-for="edge in $static.projects.edges"
+        :key="edge.id"
+        :image="edge.node.image"
+        :title="edge.node.title"
+        :subtitle="edge.node.subtitle"
+        :url="edge.node.url"
+      />
     </div>
   </section>
 </template>
 
+<static-query>
+query {
+  projects: allProject(limit: 3) {
+    edges {
+      node {
+        title
+        image (width: 350)
+        subtitle
+        url
+        path
+      }
+    }
+  }
+}
+</static-query>
+
 <script>
-// import ProjectCard from "@/components/ProjectCard.vue";
-import HeadingMore from "@/components/HeadingMore.vue";
+import ProjectCard from "~/components/ProjectCard.vue";
+import HeadingMore from "~/components/HeadingMore.vue";
 
 export default {
   components: {
     HeadingMore,
+    ProjectCard
   },
   created() {
     console.log($static.project);
@@ -32,48 +50,30 @@ export default {
 
 <style lang="scss" scoped>
 section {
-  padding: $spacer;
+  padding: $spacer 0;
+}
+
+.wrap {
+  padding: 0 $spacer;
 }
 
 .projects {
-  padding: $spacer;
   display: flex;
-  overflow: visible;
+  padding: $spacer;
+  overflow-x: scroll;
+  overflow-y: visible;
   justify-content: space-between;
-
-  @include lt-sm {
-    width: 100%;
-    margin: 0;
-    max-width: 100%;
-    overflow-x: scroll;
-  }
-}
-
-.spacer {
-  width: 0.1px;
-  height: 0.1px;
-  flex-shrink: 0;
-  overflow: hidden;
-  @include sm {
-    display: none;
-  }
 }
 
 .card {
   flex: none;
-  margin-left: $spacer;
+  margin-right: $spacer;
   width: 14em;
 
-  &.last {
-    margin: 0 $spacer;
-  }
-
   @include sm {
-    margin: 0;
-    margin-right: 1em;
     flex: auto;
 
-    &.last {
+    &:last-child {
       margin: 0;
     }
   }

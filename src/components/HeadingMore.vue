@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="heading">
     <div class="container split">
       <h2>{{ title }}</h2>
       <g-link :to="link" class="more">more<span>→</span></g-link>

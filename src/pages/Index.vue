@@ -1,22 +1,19 @@
 <template>
   <Layout>
     <Hero />
-    <FeaturedProject />
+    <FeaturedProjects />
     <RecentBlog />
-    <div class="long">
-      Body text
-    </div>
   </Layout>
 </template>
 
 <script>
 import Hero from "~/components/Hero.vue";
-import FeaturedProject from "~/components/FeaturedProject.vue";
+import FeaturedProjects from "~/components/FeaturedProjects.vue";
 import RecentBlog from "~/components/RecentBlog.vue";
 export default {
   components: {
     Hero,
-    FeaturedProject,
+    FeaturedProjects,
     RecentBlog,
   },
   metaInfo: {
@@ -24,13 +21,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-.home-links a {
-  margin-right: 1rem;
-}
-
-.long {
-  padding: 50vh $spacer;
-}
-</style>

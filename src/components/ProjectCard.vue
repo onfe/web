@@ -1,9 +1,9 @@
-<template functional>
-  <a :href="props.url" class="card">
-    <g-image :src="props.image" :size="350" class="card-img" />
+<template>
+  <a :href="url" class="card">
+    <g-image :src="image" :size="350" class="card-img" />
     <div class="card-body">
-      <h3 class="m-0">{{ props.title }}</h3>
-      {{ props.subtitle }}
+      <h3>{{ title }}</h3>
+      <p>{{ subtitle }}</p>
     </div>
   </a>
 </template>
@@ -20,8 +20,10 @@ export default {
       default: "Untitled Subtitle",
     },
     image: {
-      type: String,
-      default: "",
+      type: Object,
+      default() {
+        return {}
+      }
     },
     url: {
       type: String,
@@ -33,7 +35,17 @@ export default {
 
 <style lang="scss" scoped>
 a {
-  display: block;
   text-decoration: none;
+  display: block;
+}
+
+.card-img {
+
+}
+
+p {
+  margin: 0;
+  margin-top: $spacer / 2;
+  color: var(--colour-secondary);
 }
 </style>

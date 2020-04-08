@@ -10,6 +10,14 @@ module.exports = {
         typeName: "Post",
       },
     },
+    {
+      use: "@gridsome/source-filesystem",
+      options: {
+        // resolveAbsolutePaths: true,
+        path: "./content/projects/*/index.md",
+        typeName: "Project",
+      },
+    },
   ],
   chainWebpack(config) {
     // Load global scss variables

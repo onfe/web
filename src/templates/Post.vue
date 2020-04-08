@@ -22,8 +22,6 @@ query Post ($path: String!) {
 export default {};
 </script>
 
-<style lang="scss" scoped>
-article {
-  padding: $spacer;
-}
+<style lang="scss">
+@import "src/assets/scss/_posts.scss";
 </style>

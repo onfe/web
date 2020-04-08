@@ -1,5 +1,5 @@
 <template lang="html">
-  <g-link :to="path" class="card">
+  <g-link :aria-label="`Read Post ${title}`" :to="path" class="card">
     <article class="card-body">
       <div class="titlebar">
         <h3>{{ title }}</h3>

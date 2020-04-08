@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import 'code';
+
+article {
+  overflow: hidden;
+  pre {
+    background: var(--colour-d-background);
+    color: var(--colour-d-primary);
+    position: relative;
+    padding: $spacer 0;
+    width: 100%;
+    z-index: 0;
+
+    code {
+      overflow: visible;
+      display: block;
+      margin: -$spacer;
+      padding: $spacer;
+      width: 100vw;
+      overflow-x: auto;
+
+      @include sm {
+        width: calc(100% + #{2*$spacer});
+      }
+    }
+
+    &::before {
+      display: block;
+      content: "";
+      background: var(--colour-d-background);
+      width: 100vw;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      height: 100%;
+      transform: translateX(-50vw);
+      z-index: -1;
+    }
+  }
+
+  code {
+    font-family: 'Source Code Pro', monospace;
+  }
+}

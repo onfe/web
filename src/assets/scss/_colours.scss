@@ -1,10 +1,10 @@
 $colour-yellow: #ffde00;
 $colour-blue: #0096ff;
 
-$colour-focus: desaturate($colour-blue, 15%);
+$colour-focus: darken(desaturate($colour-blue, 25%), 10%);
 
 $colour-dark: #001020;
-$colour-darkish: lighten($colour-dark, 3%);
+$colour-darkish: desaturate(lighten($colour-dark, 5%), 40%);
 $colour-light: #f8f9fa;
 $colour-secondary: darken($colour-light, 55%);
 $colour-dark-secondary: darken($colour-light, 45%);

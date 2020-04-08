@@ -27,7 +27,7 @@ export default {
 .more {
   padding: $spacer / 4 0;
   display: inline-block;
-  color: $colour-focus;
+  color: var(--colour-focus);
   text-decoration: none;
 
   span {

@@ -1,6 +1,10 @@
 <template>
   <Layout>
-    <div id="guide" v-html="$page.post.content" />
+    <article>
+      <div class="container">
+        <div v-html="$page.post.content" />
+      </div>
+    </article>
   </Layout>
 </template>
 
@@ -18,4 +22,8 @@ query Post ($path: String!) {
 export default {};
 </script>
 
-<style lang="css" scoped></style>
+<style lang="scss" scoped>
+article {
+  padding: $spacer;
+}
+</style>

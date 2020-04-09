@@ -1,7 +1,7 @@
 <template>
   <section>
     <HeadingMore class="heading" title="Latest Posts" more="/blog/" />
-    <ul class="container">
+    <div class="container">
       <PostPreview
         class="post"
         v-for="edge in $static.posts.edges"
@@ -9,7 +9,7 @@
         v-bind="edge.node"
         :date="formatDate(edge.node.date)"
       />
-    </ul>
+    </div>
   </section>
 </template>
 
@@ -54,7 +54,6 @@ section {
 
 .container {
   margin-top: $spacer;
-  padding: 0;
 
   > * {
     margin-bottom: $spacer;

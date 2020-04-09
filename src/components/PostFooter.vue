@@ -1,13 +1,13 @@
 <template functional>
-<div class="post-footer">
-  <div class="container">
-    <ul class="tags">
-      <li v-for="(tag, key) in props.tags" v-key="key">
-        {{ tag }}
-      </li>
-    </ul>
+  <div class="post-footer">
+    <div class="container">
+      <ul class="tags">
+        <li v-for="(tag, key) in props.tags" v-key="key">
+          {{ tag }}
+        </li>
+      </ul>
+    </div>
   </div>
-</div>
 </template>
 
 <script>
@@ -18,7 +18,7 @@ export default {
       default: []
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

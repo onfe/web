@@ -1,13 +1,13 @@
 <template>
   <Layout>
-    <PostHeader v-bind="$page.post" :date="fDate"/>
-    <ScrollIndicator class="scroll-indicator"/>
+    <PostHeader v-bind="$page.post" :date="fDate" />
+    <ScrollIndicator class="scroll-indicator" />
     <article>
       <div class="container">
         <div v-html="$page.post.content" />
       </div>
     </article>
-    <PostFooter :tags="$page.post.tags"/>
+    <PostFooter :tags="$page.post.tags" />
   </Layout>
 </template>
 
@@ -25,22 +25,22 @@ query Post ($path: String!) {
 </page-query>
 
 <script>
-import {formattedDate} from '~/assets/js/utils.js';
-import PostHeader from '~/components/PostHeader.vue';
-import ScrollIndicator from '~/components/ScrollIndicator';
-const PostFooter = () => import('~/components/PostFooter.vue');
-  export default {
-    components: {
-      PostHeader,
-      ScrollIndicator,
-      PostFooter
-    },
-    computed: {
-      fDate() {
-        return formattedDate(this.$page.post.date)
-      }
+import { formattedDate } from "~/assets/js/utils.js";
+import PostHeader from "~/components/PostHeader.vue";
+import ScrollIndicator from "~/components/ScrollIndicator";
+const PostFooter = () => import("~/components/PostFooter.vue");
+export default {
+  components: {
+    PostHeader,
+    ScrollIndicator,
+    PostFooter
+  },
+  computed: {
+    fDate() {
+      return formattedDate(this.$page.post.date);
     }
   }
+};
 </script>
 
 <style lang="scss">

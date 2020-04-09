@@ -95,5 +95,4 @@ section /deep/ .heading {
     display: none;
   }
 }
-
 </style>

@@ -30,7 +30,7 @@ query {
 </static-query>
 
 <script>
-import { formattedDate } from '~/assets/js/utils.js'
+import { formattedDate } from "~/assets/js/utils.js";
 import HeadingMore from "@/components/HeadingMore.vue";
 import PostPreview from "@/components/PostPreview.vue";
 
@@ -41,7 +41,7 @@ export default {
   },
   methods: {
     formatDate(date) {
-      return formattedDate(date)
+      return formattedDate(date);
     }
   }
 };

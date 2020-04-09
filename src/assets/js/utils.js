@@ -20,6 +20,4 @@ function formattedDate(d) {
   return `${months[date.getMonth()]} ${date.getDate()}${year}`;
 }
 
-export {
-  formattedDate
-}
+export { formattedDate };

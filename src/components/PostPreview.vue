@@ -1,9 +1,16 @@
 <template functional>
-  <g-link :class="[data.class, data.staticClass]" :aria-label="`Read Post ${props.title}`" :to="props.path" class="card">
+  <g-link
+    :class="[data.class, data.staticClass]"
+    :aria-label="`Read Post ${props.title}`"
+    :to="props.path"
+    class="card"
+  >
     <article class="card-body">
       <div class="titlebar">
         <h3>{{ props.title }}</h3>
-        <div class="meta">{{ props.timeToRead }} min read • {{ props.date }}</div>
+        <div class="meta">
+          {{ props.timeToRead }} min read • {{ props.date }}
+        </div>
       </div>
       <p v-if="props.lead" class="lead">
         {{ props.lead }}

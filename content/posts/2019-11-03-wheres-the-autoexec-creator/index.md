@@ -1,5 +1,5 @@
 ---
-title: Where's the autoexec creator gone?
+title: Wheres the autoexec creator gone?
 date: 2019-11-03
 lead: It's in the past now...
 tags:

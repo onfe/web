@@ -1,26 +1,26 @@
 <template functional>
   <ul class="social" :class="[data.class, data.staticClass]">
     <li class="collection" group="ID">
-      <a class="item" aria-label="Keybase" style="--hovcol: #ff6f21;" href="#"
+      <a class="item" aria-label="Keybase" style="--hovcol: #ff6f21;" href="https://keybase.io/onfe"
         ><font-awesome-icon :icon="['fab', 'keybase']"
       /></a>
     </li>
     <li class="collection" group="Social">
-      <a class="item" aria-label="Twitter" style="--hovcol: #1da1f3;" href="#"
+      <a class="item" aria-label="Twitter" style="--hovcol: #1da1f3;" href="https://twitter.com/onfe1"
         ><font-awesome-icon :icon="['fab', 'twitter']"
       /></a>
-      <a class="item" aria-label="YouTube" style="--hovcol: #ff0000;" href="#"
+      <a class="item" aria-label="YouTube" style="--hovcol: #ff0000;" href="https://www.youtube.com/user/onfe1"
         ><font-awesome-icon :icon="['fab', 'youtube']"
       /></a>
-      <a class="item" aria-label="LinkedIn" style="--hovcol: #0a66c2;" href="#"
+      <a class="item" aria-label="LinkedIn" style="--hovcol: #0a66c2;" href="https://www.linkedin.com/in/edward-hails/"
         ><font-awesome-icon :icon="['fab', 'linkedin']"
       /></a>
     </li>
     <li class="collection" group="Portfolio">
-      <a class="item" aria-label="GitHub" style="--hovcol: #fff;" href="#"
+      <a class="item" aria-label="GitHub" style="--hovcol: #fff;" href="https://github.com/onfe"
         ><font-awesome-icon :icon="['fab', 'github']"
       /></a>
-      <a class="item" aria-label="GitLab" style="--hovcol: #fc9403;" href="#"
+      <a class="item" aria-label="GitLab" style="--hovcol: #fc9403;" href="https://gitlab.com/onfe"
         ><font-awesome-icon :icon="['fab', 'gitlab']"
       /></a>
     </li>

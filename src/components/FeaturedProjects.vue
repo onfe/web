@@ -69,6 +69,21 @@ section /deep/ .heading {
     padding: $spacer 0;
     overflow: visible;
   }
+
+  > /deep/ .card {
+    flex: none;
+    margin-right: $spacer;
+    width: 14em;
+
+    @include sm {
+      flex: auto;
+
+      // spacer is 1st last child
+      &:nth-last-child(2) {
+        margin: 0;
+      }
+    }
+  }
 }
 
 .spacer {
@@ -81,18 +96,4 @@ section /deep/ .heading {
   }
 }
 
-.card {
-  flex: none;
-  margin-right: $spacer;
-  width: 14em;
-
-  @include sm {
-    flex: auto;
-
-    // spacer is 1st last child
-    &:nth-last-child(2) {
-      margin: 0;
-    }
-  }
-}
 </style>

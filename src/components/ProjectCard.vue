@@ -1,14 +1,14 @@
-<template>
-  <a :href="url" class="card" :aria-label="`To ${title}`">
+<template functional>
+  <a :href="props.url" class="card" :class="[data.class, data.staticClass]" :aria-label="`To ${props.title}`">
     <g-image
-      :alt="`${title} - ${subtitle}`"
-      :src="image"
+      :alt="`${props.title} - ${props.subtitle}`"
+      :src="props.image"
       :size="350"
       class="card-img"
     />
     <div class="card-body">
-      <h3>{{ title }}</h3>
-      <p>{{ subtitle }}</p>
+      <h3>{{ props.title }}</h3>
+      <p>{{ props.subtitle }}</p>
     </div>
   </a>
 </template>

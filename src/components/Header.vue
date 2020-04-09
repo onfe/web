@@ -58,7 +58,7 @@ nav {
     left: 0;
   }
 
-  &.nuxt-link-exact-active::before {
+  &.active::before {
     width: 100%;
     left: 0;
     background: var(--colour-yellow);

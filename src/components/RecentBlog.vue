@@ -1,14 +1,15 @@
 <template>
   <section>
     <HeadingMore class="heading" title="Latest Posts" more="/blog/" />
-    <div class="container">
+    <ul class="container">
       <PostPreview
         class="post"
         v-for="edge in $static.posts.edges"
         v-bind:key="edge.id"
         v-bind="edge.node"
+        :date="formatDate(edge.node.date)"
       />
-    </div>
+    </ul>
   </section>
 </template>
 
@@ -29,6 +30,7 @@ query {
 </static-query>
 
 <script>
+import { formattedDate } from '~/assets/js/utils.js'
 import HeadingMore from "@/components/HeadingMore.vue";
 import PostPreview from "@/components/PostPreview.vue";
 
@@ -36,6 +38,11 @@ export default {
   components: {
     HeadingMore,
     PostPreview
+  },
+  methods: {
+    formatDate(date) {
+      return formattedDate(date)
+    }
   }
 };
 </script>
@@ -45,11 +52,12 @@ section {
   padding: $spacer;
 }
 
-.post {
-  margin-bottom: $spacer;
-}
-
 .container {
   margin-top: $spacer;
+  padding: 0;
+
+  > * {
+    margin-bottom: $spacer;
+  }
 }
 </style>

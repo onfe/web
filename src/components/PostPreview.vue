@@ -1,19 +1,18 @@
-<template lang="html">
-  <g-link :aria-label="`Read Post ${title}`" :to="path" class="card">
+<template functional>
+  <g-link :class="[data.class, data.staticClass]" :aria-label="`Read Post ${props.title}`" :to="props.path" class="card">
     <article class="card-body">
       <div class="titlebar">
-        <h3>{{ title }}</h3>
-        <div class="meta">{{ timeToRead }} min read • {{ fDate }}</div>
+        <h3>{{ props.title }}</h3>
+        <div class="meta">{{ props.timeToRead }} min read • {{ props.date }}</div>
       </div>
-      <p v-if="lead" class="lead">
-        {{ lead }}
+      <p v-if="props.lead" class="lead">
+        {{ props.lead }}
       </p>
     </article>
   </g-link>
 </template>
 
 <script>
-import { formattedDate } from '~/assets/js/utils.js'
 export default {
   props: {
     title: {
@@ -35,11 +34,6 @@ export default {
     timeToRead: {
       type: Number,
       default: null
-    }
-  },
-  computed: {
-    fDate() {
-      return formattedDate(this.date)
     }
   }
 };

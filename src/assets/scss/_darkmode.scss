@@ -17,6 +17,8 @@ body, body.light {
 
   --subtle-shadow: 0 #{$spacer / 4} #{$spacer} #0002;
   --subtle-shadow-pop: 0 #{$spacer / 4} #{$spacer} #0003;
+
+  --colour-subtle: #0001;
 }
 
 body {
@@ -28,6 +30,7 @@ body {
     --subtle-shadow: 0 #{$spacer / 4} #{$spacer} #0004;
     --subtle-shadow-pop: 0 #{$spacer / 4} #{$spacer} #0005;
     --colour-focus: #{$colour-blue};
+    --colour-subtle: #fff1;
   }
 }
 
@@ -39,4 +42,5 @@ body.dark {
   --subtle-shadow: 0 #{$spacer / 4} #{$spacer} #0004;
   --subtle-shadow-pop: 0 #{$spacer / 4} #{$spacer} #0005;
   --colour-focus: #{$colour-blue};
+  --colour-subtle: #fff1;
 }

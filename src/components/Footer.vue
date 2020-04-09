@@ -1,19 +1,19 @@
 <template functional>
   <footer>
-    <div class="container footer">
-      <div class="left">
+    <ul class="container footer">
+      <li class="left">
         &copy; Edward Hails (<a href="/keybase.txt">Verify</a>)
         {{ new Date().getFullYear() }}
-      </div>
-      <div class="center">
+      </li>
+      <li class="center">
         <g-link to="/"><div class="onfe">O</div></g-link>
-      </div>
-      <div class="right">
+      </li>
+      <li class="right">
         Code snips are
         <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a>
         unless noted.
-      </div>
-    </div>
+      </li>
+    </ul>
   </footer>
 </template>
 
@@ -32,6 +32,8 @@ footer {
   @include sm {
     flex-direction: row;
   }
+  padding: 0;
+  list-style: none;
 }
 
 .center > a {

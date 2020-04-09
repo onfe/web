@@ -2,6 +2,9 @@
 title: Where's the autoexec creator gone?
 date: 2019-11-03
 lead: It's in the past now...
+tags:
+  - AutoExec
+  - CSGO
 ---
 You may have noticed the CS:GO autoexec creator is gone. It was written in PHP,
 which cannot be run on the new site.  

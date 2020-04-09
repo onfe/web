@@ -1,8 +1,8 @@
-<template>
-  <div class="heading">
+<template functional>
+  <div class="heading" :class="[data.class, data.staticClass]">
     <div class="container split">
-      <h2>{{ title }}</h2>
-      <g-link :to="link" class="more">more<span>→</span></g-link>
+      <h2>{{ props.title }}</h2>
+      <g-link :to="props.link" class="more">more<span>→</span></g-link>
     </div>
   </div>
 </template>

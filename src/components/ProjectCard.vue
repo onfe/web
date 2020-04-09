@@ -44,9 +44,6 @@ a {
   display: block;
 }
 
-.card-img {
-}
-
 p {
   margin: 0;
   margin-top: $spacer / 2;

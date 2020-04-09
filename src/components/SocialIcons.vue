@@ -1,11 +1,11 @@
 <template functional>
-  <div class="social" :class="[data.class, data.staticClass]">
-    <div class="collection" group="ID">
+  <ul class="social" :class="[data.class, data.staticClass]">
+    <li class="collection" group="ID">
       <a class="item" aria-label="Keybase" style="--hovcol: #ff6f21;" href="#"
         ><font-awesome-icon :icon="['fab', 'keybase']"
       /></a>
-    </div>
-    <div class="collection" group="Social">
+    </li>
+    <li class="collection" group="Social">
       <a class="item" aria-label="Twitter" style="--hovcol: #1da1f3;" href="#"
         ><font-awesome-icon :icon="['fab', 'twitter']"
       /></a>
@@ -15,16 +15,16 @@
       <a class="item" aria-label="LinkedIn" style="--hovcol: #0a66c2;" href="#"
         ><font-awesome-icon :icon="['fab', 'linkedin']"
       /></a>
-    </div>
-    <div class="collection" group="Portfolio">
+    </li>
+    <li class="collection" group="Portfolio">
       <a class="item" aria-label="GitHub" style="--hovcol: #fff;" href="#"
         ><font-awesome-icon :icon="['fab', 'github']"
       /></a>
       <a class="item" aria-label="GitLab" style="--hovcol: #fc9403;" href="#"
         ><font-awesome-icon :icon="['fab', 'gitlab']"
       /></a>
-    </div>
-  </div>
+    </li>
+  </ul>
 </template>
 
 <style lang="scss" scoped>
@@ -32,6 +32,7 @@ $colour-social-grouping: $colour-dark-secondary;
 
 .social {
   margin: 0 #{-$spacer / 2};
+  padding: 0;
 }
 
 .social,

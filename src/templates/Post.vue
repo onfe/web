@@ -7,6 +7,7 @@
         <div v-html="$page.post.content" />
       </div>
     </article>
+    <PostFooter :tags="$page.post.tags"/>
   </Layout>
 </template>
 
@@ -18,6 +19,7 @@ query Post ($path: String!) {
     content
     date
     timeToRead
+    tags
   }
 }
 </page-query>
@@ -26,10 +28,12 @@ query Post ($path: String!) {
 import {formattedDate} from '~/assets/js/utils.js';
 import PostHeader from '~/components/PostHeader.vue';
 import ScrollIndicator from '~/components/ScrollIndicator';
+const PostFooter = () => import('~/components/PostFooter.vue');
   export default {
     components: {
       PostHeader,
-      ScrollIndicator
+      ScrollIndicator,
+      PostFooter
     },
     computed: {
       fDate() {

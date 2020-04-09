@@ -2,6 +2,10 @@
 title: Your blog, Nuxt and You.
 date: 2019-12-31
 lead: Building a blog with Nuxt.js and Markdown.
+tags:
+  - Nuxt
+  - Vue
+  - Web Development
 ---
 A SSR blog, with lightweight pages *and* the power of a robust framework like Vue. Sounds like a dream, right? [Nuxt](https://nuxtjs.org/) promises this utopia, but needs some DIY work to add Markdown rendering and other nice-to-haves, such as progressive images.
 

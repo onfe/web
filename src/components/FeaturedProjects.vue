@@ -51,7 +51,7 @@ section {
   padding: 0 $spacer;
 }
 
-.heading {
+section /deep/ .heading {
   margin-top: $spacer;
 }
 

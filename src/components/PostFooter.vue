@@ -2,7 +2,7 @@
   <div class="post-footer">
     <div class="container">
       <ul class="tags">
-        <li v-for="(tag, key) in props.tags" v-key="key">
+        <li v-for="(tag, key) in props.tags" v-bind:key="key">
           {{ tag }}
         </li>
       </ul>
@@ -15,7 +15,7 @@ export default {
   props: {
     tags: {
       type: Array,
-      default: []
+      default: () => []
     }
   }
 };

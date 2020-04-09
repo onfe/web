@@ -4,7 +4,7 @@ subtitle: "OSS autocomplete engine"
 description: "A memory-aware lightning-fast autocomplete engine, written in C++."
 date: 2019-04-04
 featured: true
-image: "./beautisearch.jpg"
+image: "./completionist.png"
 url: "https://github.com/onfe/Completionist"
 links:
 # - type: "primary"

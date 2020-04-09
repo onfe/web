@@ -55,7 +55,7 @@ section {
 .container {
   margin-top: $spacer;
 
-  > * {
+  /deep/ .post {
     margin-bottom: $spacer;
   }
 }

@@ -1,19 +1,19 @@
 <template>
   <Layout>
     <Hero />
-    <FeaturedProjects />
+    <FeaturedProject />
     <RecentBlog />
   </Layout>
 </template>
 
 <script>
 import Hero from "~/components/Hero.vue";
-import FeaturedProjects from "~/components/FeaturedProjects.vue";
+import FeaturedProject from "~/components/FeaturedProject.vue";
 import RecentBlog from "~/components/RecentBlog.vue";
 export default {
   components: {
     Hero,
-    FeaturedProjects,
+    FeaturedProject,
     RecentBlog
   },
   metaInfo: {

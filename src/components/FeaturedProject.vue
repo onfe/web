@@ -2,8 +2,8 @@
   <section>
     <HeadingMore class="heading" title="Featured Project" link="/projects/" />
     <div class="container">
-      <a class="card" href="#">
-        <g-image src="~/assets/img/picto-banner.png" />
+      <a class="card" href="https://picto.uk">
+        <g-image src="~/assets/img/picto-banner.png" width="960"/>
       </a>
     </div>
   </section>
@@ -22,10 +22,10 @@ export default {
 <style lang="scss" scoped>
 section {
   padding: $spacer;
-}
 
-.heading {
-  padding-bottom: $spacer;
+  /deep/ .heading {
+    padding-bottom: $spacer;
+  }
 }
 
 .card img {

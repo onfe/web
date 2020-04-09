@@ -1,16 +1,18 @@
 <template>
   <Layout>
     <PageTitle title="All Projects" />
-    <div class="container">
-      <ProjectCard
-        class="card"
-        v-for="edge in $page.projects.edges"
-        :key="edge.id"
-        :image="edge.node.image"
-        :title="edge.node.title"
-        :subtitle="edge.node.subtitle"
-        :url="edge.node.url"
-      />
+    <div class="projects">
+      <div class="container">
+        <ProjectCard
+          class="card"
+          v-for="edge in $page.projects.edges"
+          :key="edge.id"
+          :image="edge.node.image"
+          :title="edge.node.title"
+          :subtitle="edge.node.subtitle"
+          :url="edge.node.url"
+        />
+      </div>
     </div>
   </Layout>
 </template>
@@ -21,7 +23,7 @@ query {
     edges {
       node {
         title
-        image (width: 350)
+        image (width: 471)
         subtitle
         url
         path
@@ -50,9 +52,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.projects {
+  padding: $spacer;
+}
 
 .container {
-  padding: $spacer 0;
   display: grid;
   grid-gap: $spacer;
   grid-template-columns: 1fr;

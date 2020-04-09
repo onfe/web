@@ -1,6 +1,6 @@
 <template>
   <section>
-    <HeadingMore class="heading" title="Featured Project" link="#" />
+    <HeadingMore class="heading" title="Featured Project" link="/projects/" />
     <div class="container">
       <a class="card" href="#">
         <g-image src="~/assets/img/picto-banner.png" />

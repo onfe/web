@@ -1,6 +1,6 @@
 <template>
   <section>
-    <HeadingMore class="heading" title="Latest Posts" more="/blog/" />
+    <HeadingMore class="heading" title="Latest Posts" link="/blog/" />
     <div class="container">
       <PostPreview
         class="post"

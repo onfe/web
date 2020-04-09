@@ -15,7 +15,7 @@
 
 <page-query>
 query {
-  posts: allPost(sortBy: "date", order: DESC limit: 2) {
+  posts: allPost(sortBy: "date", order: DESC) {
     edges {
       node {
         title

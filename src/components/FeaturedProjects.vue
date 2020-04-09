@@ -1,6 +1,6 @@
 <template>
   <section>
-    <HeadingMore class="heading" title="Featured Projects" link="#" />
+    <HeadingMore class="heading" title="Featured Projects" link="/projects/" />
     <div class="container">
       <div id="feat-proj" class="projects">
         <ProjectCard

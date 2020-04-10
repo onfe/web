@@ -7,11 +7,23 @@
 }
 
 // Work Sans (Main Text)
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200..900&display=swap');
-
+@font-face {
+  src:
+    url('/font/work-sans.woff2') format('woff2 supports variations'),
+    url('/font/work-sans.woff2') format('woff2-variations'),
+    url('/font/work-sans.woff') format('woff');
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 350 425;
+  font-display: swap;
+}
 html, body {
   font-family: 'Work Sans', sans-serif;
   font-size: 18px;
+}
+
+p {
+  font-weight: 350;
 }
 
 *, *:before, *:after {

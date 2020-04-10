@@ -3,7 +3,7 @@
     <HeadingMore class="heading" title="Featured Project" link="/projects/" />
     <div class="container">
       <a class="card" href="https://picto.uk">
-        <g-image src="~/assets/img/picto-banner.png" width="1920"/>
+        <g-image src="~/assets/img/picto-banner.png" width="1920" />
       </a>
     </div>
   </section>

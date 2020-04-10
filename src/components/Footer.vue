@@ -9,7 +9,7 @@
         <g-link to="/"><div class="onfe">O</div></g-link>
       </li>
       <li class="right">
-        Code snips are
+        <a href="/credit.txt">Credit</a>. Code snips are
         <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a>
         unless noted.
       </li>

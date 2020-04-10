@@ -34,7 +34,7 @@ query {
 </page-query>
 
 <script>
-import PageTitle from '~/components/PageTitle.vue'
+import PageTitle from "~/components/PageTitle.vue";
 import { formattedDate } from "~/assets/js/utils.js";
 import ProjectCard from "@/components/ProjectCard.vue";
 

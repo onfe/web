@@ -2,7 +2,7 @@
   <section>
     <div class="container">
       <div class="about">
-        <g-image width="144" alt="Edward Hails" src="~/assets/img/me.jpg" />
+        <g-image width="288" alt="Edward Hails" src="~/assets/img/me.jpg" />
         <h3>About me</h3>
         <p>
           I'm <span class="special">Edward Hails</span>; a BSc Computer

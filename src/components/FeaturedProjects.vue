@@ -24,7 +24,7 @@ query {
     edges {
       node {
         title
-        image (width: 350)
+        image (width: 700)
         subtitle
         url
         path

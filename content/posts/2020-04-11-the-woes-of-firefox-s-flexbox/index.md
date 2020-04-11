@@ -42,11 +42,11 @@ Better still, it worked like a charm, no JavaScript needed. When I'm at the bott
 
 # The fall
 
-We pushed our solution to production and sat back to admire our work. It was so simple and elegant, with no need for the JS powered scrolling or horrendous markup.
+We pushed our solution to production and sat back to admire our work. It was so simple and elegant, with no need for JS powered scrolling or horrendous markup.
 
-The thing with something so wonderful and great in the world of web development is it must be too good to be true. A good friend of mine took the site for a test-drive, and left one rather confused remark: "I can't scroll backwards".
+The thing with something so wonderful and great in the world of web development is it must be too good to be true. A good friend of mine took the site for a test-drive, and left one rather confused remark:
 
-> It all worked so perfectly, until it didn't.
+> I can't scroll backwards
 
 Firefox has a rather fickle relationship with Flexbox. It doesn't overflow if some obscure arrangement of itself, it's parents and flex-items don't have correctly set `min-height`s (although this is somehow [intended behaviour](https://drafts.csswg.org/css-flexbox/#min-size-auto). Go figure).
 
@@ -84,7 +84,7 @@ Thinking about it, `flex-direction: column-reverse` is just the same as `flex-di
 }
 ```
 
-Looks pretty dumb, right? The really silly thing is it works almost perfectly! On mobile, scrolling isn't inverted and works (mostly) as expected, and on desktop spinning the scroll-wheel the other way didn't seem that bad.
+Sounds pretty dumb, looks pretty dumb. Unfortunately it works almost perfectly! On mobile, scrolling isn't inverted and works (mostly) as expected, and on desktop spinning the scroll-wheel the other way didn't seem that bad.
 
 We actually used this solution for a while, until we realised chrome mobile would inexplicably flip scroll directions seemingly randomly. Some users ended up stuck, trying to scroll only to have it go the wrong way whichever direction they tried.
 
@@ -94,11 +94,11 @@ If you've been paying attention to recent updates to the CSS spec, you may have 
 
 ![Can I Use - overflow-anchor](./caniuse-overflow-anchor.png)
 
-Unfortunately this is a rather new feature, and as such Safari hasn't quite caught up, and even browsers with good support come unstuck sometimes. The problem is compounded by the fact the stickiness is not active by default, and needs to be activated with a scroll to the bottom of the container. However wonderful it would be to fix a CSS issue with CSS, overflow anchors aren't reliable enough to be a good enough solution.
+Unfortunately this is a rather new feature, and as such Safari hasn't quite caught up, and even browsers with support come unstuck sometimes. The problem is compounded by the fact the 'stickiness' is not active by default, and needs to be triggered with a scroll to the bottom of the container. However wonderful it would be to fix a CSS issue with CSS, overflow anchors aren't reliable enough to be a good enough solution (yet).
 
 ## Browser Detection
 
-Everywhere you go, browser detection is being replaced with feature detection. That's not the case here. Running a `@supports` query on Firefox leads it to happily tell you it supports `column-reverse`.
+Everywhere you go, browser detection is being replaced with feature detection. That's not the case here. Running a `@supports` query on Firefox leads it to happily tell you it supports `column-reverse`:
 
 ```css
 @supports (flex-direction: column-reverse) {
@@ -138,6 +138,6 @@ It's a slightly odd solution, and obviously requires a touch of JS on load, but 
 
 # Summary
 
-I hope you found this useful for when you hit a similar roadblock. Whilst I hope the bug does get fixed in the future, for now it seems like workarounds like the ones above will be the norm.
+None of these solutions are perfect, but performing browser detection comes pretty close. Online messaging is a rather sensible use case for `flex-direction: column-reverse`, and when it works well it's fantastically concise and easy to implement. I hope you found this useful for when you hit a similar roadblock. Whilst I hope the bug does get fixed in the future, for now it seems like workarounds like the ones above will be the norm.
 
 If you've found another neat way to get around this issue, [I'd love to hear it](https://twitter.com/onfe1)!

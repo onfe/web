@@ -131,7 +131,7 @@
         class="item"
         aria-label="GitHub"
         style="--hovcol: #0070ba;"
-        href="https://github.com/onfe"
+        href="https://www.paypal.me/onfe"
         ><svg
           aria-hidden="true"
           focusable="false"

@@ -12,6 +12,7 @@
 
 article {
   overflow: hidden;
+  position: relative;
   padding: $spacer;
   font-weight: 350;
   line-height: 1.5;
@@ -63,6 +64,12 @@ article {
         display: none;
       }
     }
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: $spacer / 2;
+    box-shadow: var(--subtle-shadow);
   }
 
   code {

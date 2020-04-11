@@ -60,7 +60,7 @@ If you pop over to check the support for `flex-direction`, you'll see some [rath
 
 > Does not support overflow when using `*-reverse`. See [bug 1042151](https://bugzil.la/1042151) for more info.
 
-Bug [1042151](https://bugzil.la/1042151) has been open for 6 years and doesn't seem like it'll be getting a fix anytime soon. As the questions littered across StackOverflow demonstrate, this seems to be a fairly common use case and issue to run into. Almost every answer however, demonstrates some wild JavaScript-heavy alternative or a workaround that looses the distinct benefit of the sticky-scrolling.
+Bug [1042151](https://bugzil.la/1042151) has been open for 6 years and doesn't seem like it'll be getting a fix anytime soon. As the questions littered across Stack Overflow demonstrate, this seems to be a fairly common use case and issue to run into. Almost every answer however, demonstrates some wild JavaScript-heavy alternative or a workaround that looses the distinct benefit of the sticky-scrolling.
 
 # The solutions
 
@@ -84,7 +84,7 @@ Thinking about it, `flex-direction: column-reverse` is just the same as `flex-di
 }
 ```
 
-Sounds pretty dumb, looks pretty dumb. Unfortunately it works almost perfectly! On mobile, scrolling isn't inverted and works (mostly) as expected, and on desktop spinning the scroll-wheel the other way didn't seem that bad.
+Sounds pretty dumb and looks pretty dumb. Unfortunately it works almost perfectly! On mobile, scrolling isn't inverted and works (mostly) as expected, and on desktop spinning the scroll-wheel the other way didn't seem that bad.
 
 We actually used this solution for a while, until we realised chrome mobile would inexplicably flip scroll directions seemingly randomly. Some users ended up stuck, trying to scroll only to have it go the wrong way whichever direction they tried.
 

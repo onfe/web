@@ -2,8 +2,12 @@
   <section>
     <HeadingMore class="heading" title="Featured Project" link="/projects/" />
     <div class="container">
-      <a class="card" href="https://picto.uk">
-        <g-image src="~/assets/img/picto-banner.png" width="960" />
+      <a class="card" aria-label="Link to picto.uk" href="https://picto.uk">
+        <g-image
+          src="~/assets/img/picto-banner.png"
+          alt="picto.uk banner"
+          width="960"
+        />
       </a>
     </div>
   </section>

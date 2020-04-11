@@ -47,6 +47,9 @@ export default {
     formatDate(date) {
       return formattedDate(date);
     }
+  },
+  metaInfo: {
+    title: "Projects"
   }
 };
 </script>

@@ -39,6 +39,11 @@ export default {
     fDate() {
       return formattedDate(this.$page.post.date);
     }
+  },
+  metaInfo() {
+    return {
+      title: this.$page.post.title
+    };
   }
 };
 </script>

@@ -68,6 +68,10 @@ article {
 
   img {
     max-width: 100%;
+    width: auto;
+    max-height: 20 * $spacer;
+    display: block;
+    margin: 0 auto;
     border-radius: $spacer / 2;
     box-shadow: var(--subtle-shadow);
   }

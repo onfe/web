@@ -13,9 +13,14 @@ module.exports = {
     {
       use: "@gridsome/source-filesystem",
       options: {
-        // resolveAbsolutePaths: true,
         path: "./content/projects/*/index.md",
         typeName: "Project"
+      }
+    },
+    {
+      use: "@gridsome/plugin-google-analytics",
+      options: {
+        id: "UA-108088302-3"
       }
     }
   ],

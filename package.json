@@ -9,6 +9,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@gridsome/plugin-google-analytics": "^0.1.0",
     "@gridsome/remark-prismjs": "^0.3.0",
     "eslint-config-prettier": "^6.10.1",
     "gridsome": "^0.7.0",

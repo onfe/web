@@ -1,0 +1,46 @@
+@import 'colours';
+@import 'vars';
+
+body, body.light {
+  --colour-yellow: #{$colour-yellow};
+  --colour-blue: #{$colour-blue};
+
+  --colour-primary: #{$colour-black};
+  --colour-secondary: #{$colour-secondary};
+  --colour-background: #{$colour-white};
+
+  --colour-d-primary: #{$colour-white};
+  --colour-d-secondary: #{$colour-dark-secondary};
+  --colour-d-background: #{$colour-dark};
+
+  --colour-focus: #{$colour-focus};
+
+  --subtle-shadow: 0 #{$spacer / 4} #{$spacer} #0002;
+  --subtle-shadow-pop: 0 #{$spacer / 4} #{$spacer} #0003;
+
+  --colour-subtle: #0001;
+}
+
+body {
+  @media (prefers-color-scheme: dark) {
+    --colour-background: #{$colour-darkish};
+    --colour-d-primary: #{$colour-light};
+    --colour-primary: #{$colour-light};
+    --colour-secondary: #{$colour-dark-secondary};
+    --subtle-shadow: 0 #{$spacer / 4} #{$spacer} #0004;
+    --subtle-shadow-pop: 0 #{$spacer / 4} #{$spacer} #0005;
+    --colour-focus: #{$colour-blue};
+    --colour-subtle: #fff1;
+  }
+}
+
+body.dark {
+  --colour-background: #{$colour-darkish};
+  --colour-d-primary: #{$colour-light};
+  --colour-primary: #{$colour-light};
+  --colour-secondary: #{$colour-dark-secondary};
+  --subtle-shadow: 0 #{$spacer / 4} #{$spacer} #0004;
+  --subtle-shadow-pop: 0 #{$spacer / 4} #{$spacer} #0005;
+  --colour-focus: #{$colour-blue};
+  --colour-subtle: #fff1;
+}

@@ -1,0 +1,18 @@
+{
+  "heroMode": false,
+  "hero": {
+    "image": "#",
+    "url": "#"
+  },
+  "projects": [
+    {
+      "title": "Picto",
+      "subtitle": "Send doodles and chat with friends, from your browser.",
+      "description": "Picto is a drawing-based chat client, built with Vue.js and Golang. It makes use of WebSockets for real-time updates, and modern browser technologies for responsive, fluid design.",
+      "date": "2012-04-23T18:25:43.511Z",
+      "released": true,
+      "featured": true,
+      "url": "https://picto.uk"
+    }
+  ]
+}

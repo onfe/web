@@ -1,0 +1,40 @@
+@import 'breakpoints';
+@import 'vars';
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  width: 100%;
+
+  @include sm() { max-width: 540px; };
+  @include md() { max-width: 720px; };
+  @include lg() { max-width: 960px; };
+  @include xl() { max-width: 1000px; };
+}
+
+.card {
+  display: block;
+  position: relative;
+  box-shadow: var(--subtle-shadow);
+  border-radius: $spacer / 2;
+  overflow: hidden;
+  position: relative;
+
+  .card-img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: $spacer;
+    width: 100%;
+  }
+}
+
+a.card {
+  transition: box-shadow 300ms ease-in-out;
+  &:hover {
+    box-shadow: var(--subtle-shadow-pop);
+  }
+}

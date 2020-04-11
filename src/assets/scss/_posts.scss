@@ -1,0 +1,83 @@
+@import 'code';
+
+// Work Sans (Main Text)
+@font-face {
+  src:
+    url('/font/source-code-pro.woff2') format('woff2'),
+    url('/font/source-code-pro.woff') format('woff');
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-display: swap;
+}
+
+article {
+  overflow: hidden;
+  position: relative;
+  padding: $spacer;
+  font-weight: 350;
+  line-height: 1.5;
+
+  ul {
+    padding-inline-start: $spacer * 1.5;
+  }
+
+  pre {
+    background: var(--colour-d-background);
+    color: var(--colour-d-primary);
+    position: relative;
+    padding: $spacer 0;
+    border-radius: $spacer / 2;
+    width: 100%;
+    z-index: 0;
+    font-size: 16px;
+
+    code {
+      overflow: visible;
+      display: block;
+      margin: -$spacer;
+      padding: $spacer;
+      width: 100vw;
+      overflow-x: auto;
+
+      @include sm {
+        width: 100%;
+        margin: 0;
+        padding: 0 $spacer;
+      }
+    }
+
+    &::before {
+      display: block;
+      content: "";
+      background: var(--colour-d-background);
+      width: 100vw;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      height: 100%;
+      transform: translateX(-50vw);
+      z-index: -1;
+    }
+
+    @include sm {
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  img {
+    max-width: 100%;
+    width: auto;
+    max-height: 20 * $spacer;
+    display: block;
+    margin: 0 auto;
+    border-radius: $spacer / 2;
+    box-shadow: var(--subtle-shadow);
+  }
+
+  code {
+    font-weight: 400;
+    font-family: 'Source Code Pro', monospace;
+  }
+}

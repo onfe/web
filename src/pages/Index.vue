@@ -16,8 +16,12 @@ export default {
     FeaturedProject,
     RecentBlog
   },
-  metaInfo: {
-    title: "Edward Hails - Software Engineer"
+  metaInfo() {
+    const title = "Edward Hails - Software Engineer";
+    return {
+      title: title,
+      meta: [{ name: "og:title", key: "og:title", content: title }]
+    };
   }
 };
 </script>

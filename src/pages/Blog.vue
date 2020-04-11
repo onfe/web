@@ -46,8 +46,12 @@ export default {
       return formattedDate(date);
     }
   },
-  metaInfo: {
-    title: "Blog"
+  metaInfo() {
+    const title = "Blog";
+    return {
+      title: title,
+      meta: [{ name: "og:title", key: "og:title", content: title }]
+    };
   }
 };
 </script>

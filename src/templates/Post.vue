@@ -20,6 +20,7 @@ query Post ($path: String!) {
     date
     timeToRead
     tags
+    lead
   }
 }
 </page-query>
@@ -41,8 +42,16 @@ export default {
     }
   },
   metaInfo() {
+    const title = this.$page.post.title;
+    const description = this.$page.post.lead;
+
     return {
-      title: this.$page.post.title
+      title: title,
+      meta: [
+        { key: "description", name: "description", content: description },
+        { name: "og:title", key: "og:title", content: title },
+        { name: "og:description", key: "og:description", content: description }
+      ]
     };
   }
 };

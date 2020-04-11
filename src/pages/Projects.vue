@@ -48,8 +48,12 @@ export default {
       return formattedDate(date);
     }
   },
-  metaInfo: {
-    title: "Projects"
+  metaInfo() {
+    const title = "Projects";
+    return {
+      title: title,
+      meta: [{ name: "og:title", key: "og:title", content: title }]
+    };
   }
 };
 </script>

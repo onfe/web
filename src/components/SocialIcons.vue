@@ -129,7 +129,7 @@
     <li class="collection" group="Pay">
       <a
         class="item"
-        aria-label="GitHub"
+        aria-label="PayPal"
         style="--hovcol: #0070ba;"
         href="https://www.paypal.me/onfe"
         ><svg

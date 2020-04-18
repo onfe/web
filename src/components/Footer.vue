@@ -2,14 +2,15 @@
   <footer>
     <ul class="container footer">
       <li class="left">
-        &copy; Edward Hails (<a href="/keybase.txt">Verify</a>)
+        &copy; Edward Hails (<a href="https://keybase.io/onfe">Verify</a>)
         {{ new Date().getFullYear() }}
       </li>
       <li class="center">
         <g-link to="/"><div class="onfe">O</div></g-link>
       </li>
       <li class="right">
-        <a href="/credit.txt">Credit</a>. Code snips are
+        <a href="https://en.wikipedia.org/wiki/Snippet_(programming)">Snips</a>
+        are
         <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a>
         unless noted.
       </li>
@@ -43,19 +44,27 @@ footer {
 .left,
 .right {
   font-size: 0.875em;
+  text-align: center;
   @include sm {
-    width: calc(50% - 2em);
+    width: 50%;
   }
 }
 
 .center {
+  padding: 0 $spacer;
   display: none;
   @include sm {
     display: block;
   }
 }
 
-.right {
-  text-align: right;
+@include sm {
+  .right {
+    text-align: right;
+  }
+
+  .left {
+    text-align: left;
+  }
 }
 </style>

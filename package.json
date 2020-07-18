@@ -13,7 +13,7 @@
     "@gridsome/remark-prismjs": "^0.3.0",
     "eslint-config-prettier": "^6.11.0",
     "gridsome": "^0.7.14",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.19"
   },
   "devDependencies": {
     "@gridsome/source-filesystem": "^0.6.2",

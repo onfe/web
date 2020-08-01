@@ -26,7 +26,7 @@ pre[class*="language-"] {
 }
 
 .token.punctuation {
-	color: #c5c8c6;
+	color: $colour-light;
 }
 
 .namespace {
@@ -40,7 +40,7 @@ pre[class*="language-"] {
 }
 
 .token.class-name {
-	color: #FFFFB6;
+	color: $colour-light;
 	text-decoration: underline;
 }
 

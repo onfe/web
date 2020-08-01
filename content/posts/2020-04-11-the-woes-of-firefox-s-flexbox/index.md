@@ -80,7 +80,7 @@ Thinking about it, `flex-direction: column-reverse` is just the same as `flex-di
 
 .flex-item {
     flex: 0;
-    transform: scaleY(-1); /* flip the items the right way up
+    transform: scaleY(-1); /* flip the items the right way up */
 }
 ```
 

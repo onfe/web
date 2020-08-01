@@ -33,6 +33,7 @@ export default {
   span {
     display: inline-block;
     transition: transform 300ms ease-in-out;
+    padding-left: 0.5ex;
   }
 
   &:hover {
@@ -40,7 +41,7 @@ export default {
   }
 
   &:hover > span {
-    transform: translate($spacer / 2);
+    transform: translate(0.5ex);
   }
 }
 </style>

@@ -51,7 +51,7 @@ section {
   padding: 0 $spacer;
 }
 
-section /deep/ .heading {
+section ::v-deep .heading {
   margin-top: $spacer;
 }
 
@@ -70,7 +70,7 @@ section /deep/ .heading {
     overflow: visible;
   }
 
-  > /deep/ .card {
+  > ::v-deep .card {
     flex: none;
     margin-right: $spacer;
     width: 14em;

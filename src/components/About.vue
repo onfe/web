@@ -50,7 +50,7 @@ section {
     grid-template-areas: "I T" "I P" "I S";
   }
 
-  /deep/ .social {
+  ::v-deep .social {
     grid-area: S;
   }
 }

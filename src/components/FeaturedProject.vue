@@ -27,7 +27,7 @@ export default {
 section {
   padding: $spacer;
 
-  /deep/ .heading {
+  ::v-deep .heading {
     padding-bottom: $spacer;
   }
 }

@@ -10,7 +10,7 @@
   margin: 0 0 0 $resume-unit * 2;
   display: block;
   padding: $resume-unit / 2 $resume-unit;
-  background: white;
+  background: var(--colour-background);
   text-decoration: none;
 
   span {

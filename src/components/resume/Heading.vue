@@ -16,14 +16,15 @@
 header {
   padding: 2 * $resume-unit;
   padding-top: 4 * $resume-unit;
-  background-image: url("../../assets/img/resume-header.svg?inline");
+  
+  background-image: url("../../assets/img/resume-header-blue.svg?inline");
 
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 
   > * {
-    background: white;
+    background: var(--colour-background);
     display: inline-block;
   }
 }

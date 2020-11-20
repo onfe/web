@@ -144,9 +144,9 @@ export default {
 <style lang="scss" scoped>
 
 .resume {
-  background: white;
+  background: var(--colour-background);;
   font-size: 14px !important;
-  
+
   main {
     padding: 2 * $resume-unit;
   }

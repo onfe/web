@@ -7,9 +7,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  margin: 0 0 0 $spacer * 2;
+  margin: 0 0 0 $resume-unit * 2;
   display: block;
-  padding: $spacer / 2 $spacer;
+  padding: $resume-unit / 2 $resume-unit;
   background: white;
   text-decoration: none;
 

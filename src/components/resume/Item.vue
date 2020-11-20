@@ -22,11 +22,11 @@ export default {
 <style lang="scss" scoped>
 .item {
   width: 100%;
-  margin-bottom: $spacer * 0.75;
+  margin-bottom: $resume-unit * 0.75;
 }
 
 .content {
-  margin-top: $spacer / 4;
+  margin-top: $resume-unit / 4;
 }
 
 .title {
@@ -37,25 +37,25 @@ export default {
 
   h3 {
     font-weight: 600;
-    font-size: $spacer * 1.25;
+    font-size: $resume-unit * 1.25;
   }
 
   span {
     display: block;
     color: var(--colour-secondary);
-    font-size: $spacer;
+    font-size: $resume-unit;
   }
 }
 
 h4 {
-  margin-top: 0.25 * $spacer;
+  margin-top: 0.25 * $resume-unit;
   color: var(--colour-secondary);
 }
 
 ::v-deep p {
   margin: 0;
   + p {
-    margin-top: 0.25 * $spacer;
+    margin-top: 0.25 * $resume-unit;
   }
 }
 </style>

@@ -145,11 +145,11 @@ export default {
 
 .resume {
   background: white;
-  font-size: 14px;
-}
-
-main {
-  padding: 2 * $spacer;
+  font-size: 14px !important;
+  
+  main {
+    padding: 2 * $resume-unit;
+  }
 }
 
 @media print {

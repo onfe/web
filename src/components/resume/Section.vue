@@ -20,13 +20,13 @@ section {
   display: flex;
   align-items: flex-start;
   flex-direction: row;
-  padding-top: 0.25 * $spacer;
+  padding-top: 0.25 * $resume-unit;
 }
 
 h2 {
-  width: 8 * $spacer;
-  margin-right: $spacer * 2;
-  font-size: $spacer * 1.25;
+  width: 8 * $resume-unit;
+  margin-right: $resume-unit * 2;
+  font-size: $resume-unit * 1.25;
   flex-shrink: 0;
 }
 
@@ -37,7 +37,7 @@ div {
 ::v-deep p {
   margin: 0;
   + p {
-    margin-top: 0.25 * $spacer;
+    margin-top: 0.25 * $resume-unit;
   }
 }
 </style>

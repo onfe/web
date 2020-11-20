@@ -14,8 +14,8 @@
 
 <style lang="scss" scoped>
 header {
-  padding: 2 * $spacer;
-  padding-top: 4 * $spacer;
+  padding: 2 * $resume-unit;
+  padding-top: 4 * $resume-unit;
   background-image: url("../../assets/img/resume-header.svg?inline");
 
   display: flex;
@@ -29,29 +29,29 @@ header {
 }
 
 h1 {
-  padding: 0 $spacer * 0.75;
+  padding: 0 $resume-unit * 0.75;
   font-weight: 700;
-  font-size: 4 * $spacer;
-  margin-bottom: $spacer;
+  font-size: 4 * $resume-unit;
+  margin-bottom: $resume-unit;
   display: block;
 }
 
 ul {
   display: flex;
-  padding: $spacer / 2 $spacer;
+  padding: $resume-unit / 2 $resume-unit;
   list-style: none;
   margin: 0;
   font-weight: 400;
 
   * + * {
-    margin-left: $spacer * 2;
+    margin-left: $resume-unit * 2;
     position: relative;
 
     &::before {
       content: "·";
       position: absolute;
       top: 0;
-      left: -$spacer;
+      left: -$resume-unit;
     }
   }
 
@@ -62,7 +62,7 @@ ul {
 
 @media print {
   header {
-    padding-top: 2 * $spacer;
+    padding-top: 2 * $resume-unit;
   }
 }
 </style>

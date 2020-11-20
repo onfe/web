@@ -1,6 +1,5 @@
 <template>
   <div class="resume">
-    <BackToSite class="noprint" />
     <Heading />
     <main>
       <Section title="Education" class="first">
@@ -119,14 +118,12 @@
 </template>
 
 <script>
-import BackToSite from "@/components/resume/BackToSite.vue";
 import Heading from "@/components/resume/Heading.vue";
 import Section from "@/components/resume/Section.vue";
 import Item from "@/components/resume/Item.vue";
 
 export default {
   components: {
-    BackToSite,
     Heading,
     Section,
     Item
@@ -149,6 +146,8 @@ export default {
 
   main {
     padding: 2 * $resume-unit;
+    max-width: 297mm;
+    margin: 0 auto;
   }
 }
 
@@ -166,10 +165,6 @@ export default {
     left: 0;
     padding: 0;
     margin: 0;
-  }
-
-  .noprint {
-    display: none;
   }
 }
 

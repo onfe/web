@@ -141,13 +141,10 @@ export default {
 };
 </script>
 
-<style lang="scss">
-// @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+<style lang="scss" scoped>
 
-html,
-body {
+.resume {
   background: white;
-  // font-family: "Montserrat";
   font-size: 14px;
 }
 

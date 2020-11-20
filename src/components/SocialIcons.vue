@@ -4,7 +4,7 @@
       <a
         class="item"
         aria-label="Keybase"
-        style="--hovcol: #ff6f21;"
+        style="--hovcol: #ff6f21"
         href="https://keybase.io/onfe"
         ><svg
           aria-hidden="true"
@@ -26,7 +26,7 @@
       <a
         class="item"
         aria-label="Twitter"
-        style="--hovcol: #1da1f3;"
+        style="--hovcol: #1da1f3"
         href="https://twitter.com/onfe1"
         ><svg
           aria-hidden="true"
@@ -46,7 +46,7 @@
       <a
         class="item"
         aria-label="YouTube"
-        style="--hovcol: #ff0000;"
+        style="--hovcol: #ff0000"
         href="https://www.youtube.com/user/onfe1"
         ><svg
           aria-hidden="true"
@@ -66,7 +66,7 @@
       <a
         class="item"
         aria-label="LinkedIn"
-        style="--hovcol: #0a66c2;"
+        style="--hovcol: #0a66c2"
         href="https://www.linkedin.com/in/edward-hails/"
         ><svg
           aria-hidden="true"
@@ -88,7 +88,7 @@
       <a
         class="item"
         aria-label="GitHub"
-        style="--hovcol: #fff;"
+        style="--hovcol: #fff"
         href="https://github.com/onfe"
         ><svg
           aria-hidden="true"
@@ -108,7 +108,7 @@
       <a
         class="item"
         aria-label="GitLab"
-        style="--hovcol: #fc9403;"
+        style="--hovcol: #fc9403"
         href="https://gitlab.com/onfe"
         ><svg
           aria-hidden="true"
@@ -130,7 +130,7 @@
       <a
         class="item"
         aria-label="PayPal"
-        style="--hovcol: #0070ba;"
+        style="--hovcol: #0070ba"
         href="https://www.paypal.me/onfe"
         ><svg
           aria-hidden="true"

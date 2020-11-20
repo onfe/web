@@ -10,9 +10,7 @@
         </filter>
       </defs>
     </svg>
-    <canvas ref="canvas">
-      :(
-    </canvas>
+    <canvas ref="canvas"> :( </canvas>
     <div class="overlay"></div>
   </aside>
 </template>

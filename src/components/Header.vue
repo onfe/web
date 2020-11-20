@@ -1,9 +1,7 @@
 <template functional>
   <header>
     <nav class="container">
-      <g-link to="/" class="onfe">
-        ONFE
-      </g-link>
+      <g-link to="/" class="onfe"> ONFE </g-link>
       <div class="links">
         <g-link to="/blog/">Blog</g-link>
         <g-link to="/projects/">Projects</g-link>

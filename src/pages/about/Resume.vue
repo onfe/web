@@ -10,7 +10,7 @@
         >
           <p>
             Average First Class performance to date, including modules such as
-            Systems Design (82%) and Web & Internet Technologies (90%)
+            Systems Design (82%) and Web & Internet Technologies (90%).
           </p>
         </Item>
         <Item title="Havering Sixth Form College" date="2016 — 2018">

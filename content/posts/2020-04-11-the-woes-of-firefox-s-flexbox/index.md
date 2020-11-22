@@ -141,3 +141,5 @@ It's a slightly odd solution, and obviously requires a touch of JS on load, but 
 None of these solutions are perfect, but performing browser detection comes pretty close. Online messaging is a rather sensible use case for `flex-direction: column-reverse`, and when it works well it's fantastically concise and easy to implement. I hope you found this useful for when you hit a similar roadblock. Whilst I hope the bug does get fixed in the future, for now it seems like workarounds like the ones above will be the norm.
 
 If you've found another neat way to get around this issue, [I'd love to hear it](https://twitter.com/onfe1)!
+
+*Update:* It looks like [Firefox 81 should fix this](https://bugzil.la/1042151)!

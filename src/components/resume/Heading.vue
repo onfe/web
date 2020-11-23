@@ -7,7 +7,7 @@
         <li><a href="https://onfe.uk">onfe.uk</a></li>
         <li><a href="https://github.com/onfe">github.com/onfe</a></li>
         <li>
-          <a href="mailto:edward.hails@outlook.com">edward.hails@outlook.com</a>
+          <a href="mailto:edward@onfe.uk">edward@onfe.uk</a>
         </li>
         <li>+44 7462 559296</li>
       </ul>

@@ -16,7 +16,6 @@
 </template>
 
 <style lang="scss" scoped>
-
 .back {
   position: absolute;
   top: 0;
@@ -49,10 +48,9 @@
   }
 }
 
-
 header {
   padding-top: 2 * $resume-unit;
-  
+
   background-image: url("../../assets/img/resume-header-blue.svg?inline");
 }
 

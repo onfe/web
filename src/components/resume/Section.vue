@@ -34,7 +34,6 @@ section {
 }
 
 h2 {
-
   font-size: $resume-unit * 1.5;
   margin-bottom: $spacer;
 

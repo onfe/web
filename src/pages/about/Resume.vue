@@ -139,9 +139,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .resume {
-  background: var(--colour-background);;
+  background: var(--colour-background);
   font-size: 14px !important;
 
   main {

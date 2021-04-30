@@ -9,7 +9,7 @@
           date="2018 — Present"
         >
           <p>
-            Average First Class performance to date, including modules such as
+            First Class performance to date, including modules such as
             Systems Design (82%) and Web & Internet Technologies (90%).
           </p>
         </Item>
@@ -27,8 +27,8 @@
           date="Jun 2020 — Sep 2020"
         >
           <p>
-            In a team responsible for rebuilding the test suite behind company
-            wide tooling using SVUnit, improving test quality and consistency.
+            Responsible for rebuilding the test suite behind company-wide
+            tooling using SVUnit, improving test quality and consistency.
             The revitalised test suite has driven an increase in unit test usage
             across teams.
           </p>
@@ -54,8 +54,7 @@
           date="Sep 2020 — Present"
         >
           <p>
-            Taught first & second year students Haskell and Web Technologies in
-            1-to-1 sessions.
+            Taught first & second-year students Haskell, Software Engineering and Web Technologies.
           </p>
         </Item>
       </Section>
@@ -67,8 +66,8 @@
         >
           <p>
             Elected Treasurer in the small team behind Sheffield's largest
-            student Hackathon, two years running. Organised hackathons both
-            online and in-person, attended by hundreds of students.
+            student Hackathon, two years running. Organised widely attended hackathons both
+            online and in-person.
           </p>
         </Item>
         <Item
@@ -90,13 +89,12 @@
         </Item>
       </Section>
       <Section title="Projects">
-        <Item title="Picto" date="Nov 2019 — Apr 2020">
-          Released a real-time chat service built with Vue and Golang. Leverages
-          an automatic deployment pipeline and an agile model.
+        <Item title="Popcat" date="Dec 2020 — Present">
+          A viral, competitive, browser-based clicker game.
+          Built on Golang with a Vue front-end. Sharded architecture for scalability, handling thousands of concurrent users.
         </Item>
-        <Item title="BeautiSearch" date="Feb 2018 — Present">
-          A customisable and performant homepage for your browser, built with
-          Svelte.
+        <Item title="Picto" date="Nov 2019 — Apr 2020">
+          A real-time chat service built with Vue and Go. Full PWA with automated deployment.
         </Item>
       </Section>
       <Section title="Skills">
@@ -105,12 +103,12 @@
           Java, C++, Haskell, Python, Ruby.
         </p>
         <p>
-          <strong>Frameworks:</strong> Vue, Nuxt, Svelte, Gridsome, Node,
+          <strong>Frameworks:</strong> Vue, Nuxt, Gridsome, Svelte, Node,
           Express, GraphQL.
         </p>
         <p>
-          <strong>Tooling & Systems:</strong> Linux, Git, Rollup, Webpack,
-          Cloudflare, Gerrit, Heroku, PostgreSQL.
+          <strong>Tooling & Systems:</strong> Linux, Git, Webpack, Gerrit,
+          Docker, Redis, PostgreSQL, MongoDB.
         </p>
       </Section>
     </main>

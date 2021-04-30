@@ -45,7 +45,7 @@ h2 {
   }
 
   @media print {
-    width: 8 * $resume-unit;
+    width: 7.5 * $resume-unit;
     margin-right: $resume-unit * 2;
     font-size: $resume-unit * 1.25;
     flex-shrink: 0;

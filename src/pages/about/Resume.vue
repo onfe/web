@@ -9,8 +9,8 @@
           date="2018 — Present"
         >
           <p>
-            First Class performance to date, including modules such as
-            Systems Design (82%) and Web & Internet Technologies (90%).
+            First Class performance to date, including modules such as Systems
+            Design (82%) and Web & Internet Technologies (90%).
           </p>
         </Item>
         <Item title="Havering Sixth Form College" date="2016 — 2018">
@@ -28,8 +28,8 @@
         >
           <p>
             Responsible for rebuilding the test suite behind company-wide
-            tooling using SVUnit, improving test quality and consistency.
-            The revitalised test suite has driven an increase in unit test usage
+            tooling using SVUnit, improving test quality and consistency. The
+            revitalised test suite has driven an increase in unit test usage
             across teams.
           </p>
           <p>
@@ -54,7 +54,8 @@
           date="Sep 2020 — Present"
         >
           <p>
-            Taught first & second-year students Haskell, Software Engineering and Web Technologies.
+            Taught first & second-year students Haskell, Software Engineering
+            and Web Technologies.
           </p>
         </Item>
       </Section>
@@ -66,8 +67,8 @@
         >
           <p>
             Elected Treasurer in the small team behind Sheffield's largest
-            student Hackathon, two years running. Organised widely attended hackathons both
-            online and in-person.
+            student Hackathon, two years running. Organised widely attended
+            hackathons both online and in-person.
           </p>
         </Item>
         <Item
@@ -90,11 +91,13 @@
       </Section>
       <Section title="Projects">
         <Item title="Popcat" date="Dec 2020 — Present">
-          A viral, competitive, browser-based clicker game.
-          Built on Golang with a Vue front-end. Sharded architecture for scalability, handling thousands of concurrent users.
+          A viral, competitive, browser-based clicker game. Built on Golang with
+          a Vue front-end. Sharded architecture for scalability, handling
+          thousands of concurrent users.
         </Item>
         <Item title="Picto" date="Nov 2019 — Apr 2020">
-          A real-time chat service built with Vue and Go. Full PWA with automated deployment.
+          A real-time chat service built with Vue and Go. Full PWA with
+          automated deployment.
         </Item>
       </Section>
       <Section title="Skills">
